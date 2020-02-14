@@ -2,6 +2,10 @@ package TrabajoOscurilandia;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
 
 public class Tablero {
 	
@@ -13,10 +17,12 @@ public class Tablero {
 	
 	public List<Carro> Carros = new ArrayList <Carro>(); //debe tener un maximo de 18 objetos, carros.
 	public List<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
-
+	
+	Scanner lector = new Scanner(System.in);
+	
 	
 	public static void CrearCarro() {
-	
+		
 	}
 	
 	
