@@ -6,8 +6,8 @@ import javax.swing.JOptionPane;
 
 public class Carro {
 	
-	private int ocupantes;
-	private String fechaIngreso;
+	private static int ocupantes;
+	private static String fechaIngreso;
 	private int posicion;
 
 	public Carro(int ocupantes, String fechaIngreso, int posicion, int fila, int columna) {
@@ -47,19 +47,31 @@ public class Carro {
 	
 	
 	public static void agregarCarro() {
-	int tipoAnimal = JOptionPane.showInputDialog("AGREGAR TIPO DE CARRO:"
+	int tipoCarro = JOptionPane.showInputDialog("AGREGAR TIPO DE CARRO:"
 			+ "\n" + "1.- Kromis"
 					+ "\n" + "2.- Caguano"
 							+ "\n" + "3.- Trupalla").charAt(0);
 	
-	switch (tipoAnimal) {
+	switch () {
 	
 	case '1':
 			
-		// nombreAnimal = JOptionPane.showInputDialog("Nombre de Animal: ");
+		fechaIngreso = JOptionPane.showInputDialog("1. Ingrese Fecha Ingreso de Kromis: ");
+		ocupantes = JOptionPane.showInputDialog("Ingrese Ocupantes de Kromis: ");
+		break;
+
+	case '2':
 		
-			
-		}
+		String distaciaTiro = JOptionPane.showInputDialog("Ingrese Distancia de Tiro de Caguano: ");
+		String colorConfeti = JOptionPane.showInputDialog("Ingrese color de confeti  de Caguano: ");
+		break;
+		
+	case '3':
+		
+		String nivelArmadura = JOptionPane.showInputDialog("Ingrese Nivel Armadura Trupalla: ");
+		break;
+
+	}
 	
 	
 }
