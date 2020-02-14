@@ -70,10 +70,11 @@ public class Carro {
 	
 	case '1':
 			
-		 nombreAnimal = JOptionPane.showInputDialog("Nombre de Animal: ");
+		// nombreAnimal = JOptionPane.showInputDialog("Nombre de Animal: ");
 		
 			
 		}
 	
 	
+}
 }
