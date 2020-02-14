@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Juego {
 
-	
+
 	public Juego() {
 	}
 
@@ -12,9 +12,16 @@ public class Juego {
 
 		// TODO Auto-generated method stub
 
-	JOptionPane.showMessageDialog(null, "BIENVENIDO A FIRSTLINE");
+		JOptionPane.showMessageDialog(null, "BIENVENIDO A FIRSTLINE");
+
+		Tablero.CrearCarro();
+
+
 
 	}
 
-	
+
+
+
+
 }
