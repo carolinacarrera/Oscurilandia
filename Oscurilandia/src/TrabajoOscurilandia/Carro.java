@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Carro {
 	
-	private static int ocupantes;
+	private static String ocupantes;
 	private static String fechaIngreso;
 	private int posicion;
 
