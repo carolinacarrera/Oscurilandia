@@ -26,8 +26,14 @@ public class Trupalla extends Carro {
 	public void setTamano(int tamano) {
 		this.tamano = tamano;
 	}
+	@Override
+	public String toString() {
+		return "Trupalla [NivelArmadura=" + NivelArmadura + ", tamano=" + tamano + "]";
+	}
 	
-	
+	public void imprimir() {
+		System.out.println("Nivel de Aramadura: " + getNivelArmadura() + "\nTamano: " + getTamano());
+	}
 	
 	
 }

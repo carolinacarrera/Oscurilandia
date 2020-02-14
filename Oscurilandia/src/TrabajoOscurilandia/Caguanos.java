@@ -34,7 +34,13 @@ public class Caguanos extends Carro{
 	public void setTamano(int tamano) {
 		this.tamano = tamano;
 	}
+	@Override
+	public String toString() {
+		return "Caguanos [tiro=" + tiro + ", colorConfeti=" + colorConfeti + ", tamano=" + tamano + "]";
+	}
 
-	
+	public void imprimir() {
+		System.out.println("Tiro: " + getTiro() + "\nColor confeti: " + getColorConfeti() + "\nTamano: " + getTamano());
+	}
 	
 }
