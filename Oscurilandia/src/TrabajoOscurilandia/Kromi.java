@@ -1,5 +1,7 @@
 package TrabajoOscurilandia;
 
+import javax.swing.JOptionPane;
+
 public class Kromi extends Carro {
 
 	public String anioFabricacion;
@@ -9,6 +11,11 @@ public class Kromi extends Carro {
 	public Kromi(int ocupantes, String fechaIngreso, int posicion, int fila, int columna) {
 		super(ocupantes, fechaIngreso, posicion, fila, columna);
 		// TODO Auto-generated constructor stub
+		
+		
+	
+		
+		
 	}
 	public Kromi(int ocupantes, String fechaIngreso, int posicion, int fila, int columna, String anioFabricacion,
 			String marca, int tamano) {

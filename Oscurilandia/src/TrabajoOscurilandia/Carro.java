@@ -1,5 +1,9 @@
 package TrabajoOscurilandia;
 
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
 public class Carro {
 	
 	private int ocupantes;
@@ -39,6 +43,26 @@ public class Carro {
 	public void imprimir() {
 		System.out.println("Ocupantes: " + getOcupantes() + "\n Posicion: " + getPosicion());
 	}
+	
+	
+	
+	public static void agregarCarro() {
+	int tipoAnimal = JOptionPane.showInputDialog("AGREGAR TIPO DE CARRO:"
+			+ "\n" + "1.- Kromis"
+					+ "\n" + "2.- Caguano"
+							+ "\n" + "3.- Trupalla").charAt(0);
+	
+	switch (tipoAnimal) {
+	
+	case '1':
+			
+		// nombreAnimal = JOptionPane.showInputDialog("Nombre de Animal: ");
+		
+			
+		}
+	
+	
+}
 	
 	
 }
