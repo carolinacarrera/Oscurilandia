@@ -8,14 +8,22 @@ public class Carro {
 
 	private static int ocupantes;
 	private static String fechaIngreso;
-	public int tamano;
+	private static int x;
+	private static int y;
+	
 
-	public Carro(int ocupantes, String fechaIngreso, int tamano) {
+	public Carro(int ocupantes, String fechaIngreso, int tamano, int x, int y) {
 		this.ocupantes = ocupantes;
 		this.fechaIngreso = fechaIngreso;
-		this.tamano = tamano;
+		this.x = x;
+		this.y = y;
 	}
 	
+	public Carro(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
 
 	public static int getOcupantes() {
 		return ocupantes;
@@ -43,22 +51,7 @@ public class Carro {
 	}
 
 
-
-
-	public int getTamano() {
-		return tamano;
-	}
-
-
-
-
-	public void setTamano(int tamano) {
-		this.tamano = tamano;
-	}
-
-
-
-
+	
 	@Override
 	public String toString() {
 		return "Carro [ocupantes=" + ocupantes + ", fechaIngreso=" + fechaIngreso + "]" ;
