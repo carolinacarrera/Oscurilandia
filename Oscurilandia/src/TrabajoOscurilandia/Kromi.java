@@ -21,8 +21,8 @@ public class Kromi extends Carro {
 
 	public Kromi(int x, int y) {
 		super(x, y);
-		
 	}
+	
 	public String getAnioFabricacion() {
 		return anioFabricacion;
 	}
