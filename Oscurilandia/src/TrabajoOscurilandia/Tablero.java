@@ -18,8 +18,7 @@ public class Tablero {
 	private static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 
 	private Carro carros[] = new Carro[18]; //debe tener un maximo de 18 objetos, carros.
-	public List<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
-
+	public ArrayList<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
 	Scanner lector = new Scanner(System.in);
 
 
@@ -68,11 +67,6 @@ public class Tablero {
 	}
 
 
-	public void setHuevos(List<Huevo> huevos) {
-		Huevos = huevos;
-	}
-
-
 	public Scanner getLector() {
 		return lector;
 	}
@@ -82,11 +76,7 @@ public class Tablero {
 		this.lector = lector;
 	}
 
-	public Tablero(Carro[] carros, List<Huevo> huevos, Scanner lector) {
-		this.carros = carros;
-		Huevos = huevos;
-		this.lector = lector;
-	}
+	
 
 
 	
@@ -119,6 +109,11 @@ public class Tablero {
 		}	
 
 	}*/	
+
+
+	public void setHuevos(ArrayList<Huevo> huevos) {
+		Huevos = huevos;
+	}
 
 
 	public Tablero() {
@@ -210,9 +205,6 @@ public class Tablero {
 						posicionVacio = true ;
 						tablero[x][y]='C';
 						tablero[x][y+1]='C';
-						
-						
-					
 				}
 			}
 			
@@ -251,7 +243,6 @@ public class Tablero {
 		for (int i = 0; i < 15; i++) {
 			System.out.print("|");
 			for (int j = 0; j <15; j++) {
-
 				System.out.print(tablero[i][j]+"|");
 
 
