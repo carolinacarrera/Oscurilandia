@@ -15,7 +15,7 @@ public class Trupalla extends Carro {
 	}
 	
 	public Trupalla(int x, int y) {
-		super(x, y);
+		super(x, fechaIngreso, y);
 	}
 
 	public int getNivelArmadura() {
