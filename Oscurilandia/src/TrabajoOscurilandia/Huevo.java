@@ -9,7 +9,7 @@ public class Huevo {
 	private int puntaje;
 	public ArrayList<Huevo> Huevos = new ArrayList <Huevo>();
 	
-	
+
 	
 	@Override
 	public String toString() {
