@@ -3,37 +3,26 @@ package TrabajoOscurilandia;
 public class Trupalla extends Carro {
 
 	private int NivelArmadura;
-	private int tamano;
-	public Trupalla(int ocupantes, String fechaIngreso, int posicion, int fila, int columna) {
-		super(ocupantes, fechaIngreso, posicion, fila, columna);
+
+	public Trupalla(int ocupantes, String fechaIngreso, int tamano, int nivelArmadura) {
+		super(ocupantes, fechaIngreso, tamano);
+		NivelArmadura = nivelArmadura;
+	}
+
+	public Trupalla(int ocupantes, String fechaIngreso, int tamano) {
+		super(ocupantes, fechaIngreso, tamano);
 		// TODO Auto-generated constructor stub
 	}
-	public Trupalla(int ocupantes, String fechaIngreso, int posicion, int fila, int columna, int nivelArmadura,
-			int tamano) {
-		super(ocupantes, fechaIngreso, posicion, fila, columna);
-		NivelArmadura = nivelArmadura;
-		this.tamano = tamano;
-	}
+
 	public int getNivelArmadura() {
 		return NivelArmadura;
 	}
+
 	public void setNivelArmadura(int nivelArmadura) {
 		NivelArmadura = nivelArmadura;
 	}
-	public int getTamano() {
-		return tamano;
-	}
-	public void setTamano(int tamano) {
-		this.tamano = tamano;
-	}
-	@Override
-	public String toString() {
-		return "Trupalla [NivelArmadura=" + NivelArmadura + ", tamano=" + tamano + "]";
-	}
 	
-	public void imprimir() {
-		System.out.println("Nivel de Aramadura: " + getNivelArmadura() + "\nTamano: " + getTamano());
-	}
+	
 	
 	
 }

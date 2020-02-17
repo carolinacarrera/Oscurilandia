@@ -124,8 +124,7 @@ public class Tablero {
 			String fechaIngreso = JOptionPane.showInputDialog("Ingrese Fecha Ingreso de Kromis: " + i);
 			String ocupantes = JOptionPane.showInputDialog("Ingrese Ocupantes de Kromis: " + i);
 		
-			Kromi Kromi = new Kromi(i, fechaIngreso, i, i, i, ocupantes, ocupantes, i);
-			Carros.add(Kromi);
+	
 		}
 			
 		for (int j = 1; j < 8; j++) {
