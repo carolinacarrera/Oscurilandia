@@ -1,14 +1,14 @@
 package TrabajoOscurilandia;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 public class Carro {
 
-	private static int ocupantes;
+	private int ocupantes;
 
-	protected static String fechaIngreso;
-	private static int x;
-	private static int y;
+	protected String fechaIngreso;
+	private int x;
+	private int y;
 
 
 	public Carro(int ocupantes, String fechaIngreso, int x, int y) {
@@ -24,29 +24,29 @@ public class Carro {
 		this.y = y;
 	}
 
-	public static int getOcupantes() {
+	public int getOcupantes() {
 		return ocupantes;
 	}
 
 
 
 
-	public static void setOcupantes(int ocupantes) {
-		Carro.ocupantes = ocupantes;
+	public void setOcupantes(int ocupantes) {
+		this.ocupantes = ocupantes;
 	}
 
 
 
 
-	public static String getFechaIngreso() {
+	public String getFechaIngreso() {
 		return fechaIngreso;
 	}
 
 
 
 
-	public static void setFechaIngreso(String fechaIngreso) {
-		Carro.fechaIngreso = fechaIngreso;
+	public void setFechaIngreso(String fechaIngreso) {
+		this.fechaIngreso = fechaIngreso;
 	}
 
 
@@ -60,8 +60,21 @@ public class Carro {
 		System.out.println("Ocupantes: " + getOcupantes());
 	}
 
+	public int getX() {
+		return x;
+	}
 
+	public void setX(int x) {
+		this.x = x;
+	}
 
-	
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
 
 }

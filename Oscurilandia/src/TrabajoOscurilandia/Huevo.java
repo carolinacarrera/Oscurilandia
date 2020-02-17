@@ -7,14 +7,13 @@ public class Huevo {
 	private int posicionFila;
 	private int posicionColumna;
 	private int puntaje;
-	public ArrayList<Huevo> Huevos = new ArrayList <Huevo>();
 	
 
 	
 	@Override
 	public String toString() {
 		return "Huevo [posicionFila=" + posicionFila + ", posicionColumna=" + posicionColumna + ", puntaje=" + puntaje
-				+ ", Huevos=" + Huevos + "]";
+				+ "]";
 	}
 
 
@@ -69,12 +68,6 @@ public class Huevo {
 		this.posicionFila = posicionFila;
 		this.posicionColumna = posicionColumna;
 		this.puntaje = puntaje;
-		Huevos = huevos;
-	}
-
-
-	static void Lanzamiento(){
-		
 	}
 
 	

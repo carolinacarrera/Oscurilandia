@@ -14,12 +14,12 @@ public class Tablero {
 	public static int numerosFila = 15;// numeros filas
 	public static int numerosColumnas=15;// numeros columnas
 	
-
-	private static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
+	public static int puntaje = 0;
+	public static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 
 	private Carro carros[] = new Carro[18]; //debe tener un maximo de 18 objetos, carros.
 	public ArrayList<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
-	Scanner lector = new Scanner(System.in);
+	private static Scanner lector = new Scanner(System.in);
 
 
 	public static int getNumerosFila() {
@@ -122,7 +122,28 @@ public class Tablero {
 
 
 	public static void LanzarHuevo() {
-
+		System.out.println("... Lanzando huevo ...");
+		System.out.println("Ingrese fila: ");
+		int fila = lector.nextInt();
+		
+		System.out.println("Ingrese columna: ");
+		int columna = lector.nextInt();
+		
+		if (tablero[fila][columna] == 'K') {
+			tablero[fila][columna] = 'H';
+			puntaje = puntaje + 3;			
+		}
+		
+		if (tablero[fila][columna] == 'C') {
+			tablero[fila][columna] = 'H';
+			puntaje = puntaje + 2;
+		}
+		
+		if (tablero[fila][columna] == 'T') {
+			tablero[fila][columna] = 'H';
+			puntaje = puntaje + 1;
+		}
+		
 	}
 
 
@@ -150,9 +171,27 @@ public class Tablero {
 		carros[14] = crearTrupalla();
 		carros[15] = crearTrupalla();
 		carros[16] = crearTrupalla();
-		carros[17] = crearTrupalla();
+		carros[17] = crearTrupalla();				
+	}
+	
+	public void calcularCarrosDestruidos() {
+		for (int i=0; i<3;i++) {
+			Carro kro = carros[i];
+			int x = kro.getX();
+			int y = kro.getY();
+			if (tablero[x][y] == 'H' && tablero[x+1][y] == 'H' && tablero[x+2][y] == 'H') {
+				puntaje += 10;
+			}
+		}
 		
-				
+		for (int i=3; i<8;i++) {
+			Carro cag = carros[i];
+			int x = cag.getX();
+			int y = cag.getY();
+			if (tablero[x][y] == 'H' && tablero[x][y+1] == 'H') {
+				puntaje += 7;
+			}
+		}	
 	}
 	
 
