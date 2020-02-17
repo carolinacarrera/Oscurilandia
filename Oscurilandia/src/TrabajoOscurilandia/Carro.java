@@ -8,27 +8,56 @@ public class Carro {
 
 	private static int ocupantes;
 	private static String fechaIngreso;
-	private int posicion;
+	public int tamano;
 
-	public Carro(int ocupantes, String fechaIngreso, int posicion, int fila, int columna) {
+	public Carro(int ocupantes, String fechaIngreso, int tamano) {
 		this.ocupantes = ocupantes;
 		this.fechaIngreso = fechaIngreso;
-		
-
+		this.tamano = tamano;
 	}
+	
+
 	public static int getOcupantes() {
 		return ocupantes;
 	}
-	public void setOcupantes(int ocupantes) {
-		this.ocupantes = ocupantes;
+
+
+
+
+	public static void setOcupantes(int ocupantes) {
+		Carro.ocupantes = ocupantes;
 	}
-	public String getFechaIngreso() {
+
+
+
+
+	public static String getFechaIngreso() {
 		return fechaIngreso;
 	}
-	public void setFechaIngreso(String fechaIngreso) {
-		this.fechaIngreso = fechaIngreso;
+
+
+
+
+	public static void setFechaIngreso(String fechaIngreso) {
+		Carro.fechaIngreso = fechaIngreso;
 	}
-	
+
+
+
+
+	public int getTamano() {
+		return tamano;
+	}
+
+
+
+
+	public void setTamano(int tamano) {
+		this.tamano = tamano;
+	}
+
+
+
 
 	@Override
 	public String toString() {
