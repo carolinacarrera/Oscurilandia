@@ -112,7 +112,7 @@ public class Tablero {
 	}
 
 
-	public static void CrearCarro() {
+	/*public static void CrearCarro() {
 
 		JOptionPane.showMessageDialog(null, "Ingresa informacion Carros");
 
@@ -140,7 +140,7 @@ public class Tablero {
 
 		}	
 
-	}	
+	}*/	
 
 
 	public static void LanzarHuevo() {
@@ -167,8 +167,37 @@ public class Tablero {
 
 	}
 
-	public static void CrearKromi() {
-	}
+	
+	public Kromi CrearKromi() {
+		int x;
+		int y;
+		
+		boolean  posicionVacia= false;
+		
+		do {
+			
+			x=(int)(Math.random()*13);
+			y=(int)(Math.random()*15);
+		
+			if (tablero[x][y]!='T' && tablero[x][y]!='C' && tablero[x][y]!='K') {
+			
+				if (tablero[x+1][y]!='T' && tablero[x+1][y]!='C' && tablero[x+1][y]!='K') {
+					if (tablero[x+2][y]!='T' && tablero[x+2][y]!='C' && tablero[x+2][y]!='K') {
+						posicionVacia = true ;
+						tablero[x][y]='K';
+						tablero[x+1][y]='K';
+						tablero[x+2][y]='K';
+						
+					}
+				}
+			}
+			
+		}while(!posicionVacia);
+		
+		return new Kromi(x,y);
+			
+	}		
+	
 
 	public static void CrearCaguanos() {
 	}

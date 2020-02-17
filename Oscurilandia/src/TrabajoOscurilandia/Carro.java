@@ -1,18 +1,17 @@
 package TrabajoOscurilandia;
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class Carro {
 
 	private static int ocupantes;
-	private static String fechaIngreso;
+
+	protected static String fechaIngreso;
 	private static int x;
 	private static int y;
-	
 
-	public Carro(int ocupantes, String fechaIngreso, int tamano, int x, int y) {
+
+	public Carro(int ocupantes, String fechaIngreso, int x, int y) {
 		this.ocupantes = ocupantes;
 		this.fechaIngreso = fechaIngreso;
 		this.x = x;

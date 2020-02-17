@@ -14,9 +14,7 @@ public class Juego {
 
 		JOptionPane.showMessageDialog(null, "BIENVENIDO A FIRSTLINE");
 
-		//Tablero.CrearCarro();
-
-Tablero.MostarMatriz();
+		
 
 	}
 

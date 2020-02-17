@@ -5,15 +5,20 @@ public class Caguanos extends Carro{
 	private String tiro;
 	private String colorConfeti;
 	
-	public Caguanos(int ocupantes, String fechaIngreso, int tamano, String tiro, String colorConfeti) {
-		super(ocupantes, fechaIngreso, tamano);
+	
+	public Caguanos(int ocupantes, String fechaIngreso, int x, int y, String tiro, String colorConfeti) {
+		super(ocupantes, fechaIngreso, x, y);
 		this.tiro = tiro;
 		this.colorConfeti = colorConfeti;
 	}
 
-	public Caguanos(int ocupantes, String fechaIngreso, int tamano) {
-		super(ocupantes, fechaIngreso, tamano);
+	public Caguanos(int ocupantes, String fechaIngreso, int x, int y) {
+		super(ocupantes, fechaIngreso, x, y);
 		// TODO Auto-generated constructor stub
+	}
+
+	public Caguanos(int x, int y) {
+		super(x, y);
 	}
 
 	public String getTiro() {
@@ -34,11 +39,11 @@ public class Caguanos extends Carro{
 
 	@Override
 	public String toString() {
-		return "Caguanos [tiro=" + tiro + ", colorConfeti=" + colorConfeti + ", tamano=" + tamano + "]";
+		return "Caguanos [tiro=" + tiro + ", colorConfeti=" + colorConfeti +"]";
 	}
 
 	public void imprimir() {
-		System.out.println("Tiro: " + getTiro() + "\nColor confeti: " + getColorConfeti() + "\nTamano: " + getTamano());
+		System.out.println("Tiro: " + getTiro() + "\nColor confeti: " + getColorConfeti());
 	}
 	
 }

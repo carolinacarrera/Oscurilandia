@@ -7,18 +7,24 @@ public class Kromi extends Carro {
 	public String anioFabricacion;
 	public String marca;
 	
+	
 
-	public Kromi(int ocupantes, String fechaIngreso, int tamano) {
-		super(ocupantes, fechaIngreso, tamano);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Kromi(int ocupantes, String fechaIngreso, int tamano, String anioFabricacion, String marca) {
-		super(ocupantes, fechaIngreso, tamano);
+	
+	public Kromi(int ocupantes, String fechaIngreso, int x, int y, String anioFabricacion, String marca) {
+		super(ocupantes, fechaIngreso, x, y);
 		this.anioFabricacion = anioFabricacion;
 		this.marca = marca;
 	}
 
+	public Kromi(int ocupantes, String fechaIngreso, int x, int y) {
+		super(ocupantes, fechaIngreso, x, y);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Kromi(int x, int y) {
+		super(x, y);
+	}
+	
 	public String getAnioFabricacion() {
 		return anioFabricacion;
 	}
@@ -37,13 +43,13 @@ public class Kromi extends Carro {
 
 	@Override
 	public String toString() {
-		return "Kromi [anioFabricacion=" + anioFabricacion + ", marca=" + marca + ", tamano=" + tamano + "]";
+		return "Kromi [anioFabricacion=" + anioFabricacion + ", marca=" + marca + "]";
 	}
 
 	public void imprimir() {
-		System.out.println("Anio Fabricacion: " + getAnioFabricacion() + "\n Marca: " + getMarca() + "\nTamano: " + getTamano());
+		System.out.println("Anio Fabricacion: " + getAnioFabricacion() + "\n Marca: " + getMarca());
 	}
 	
-	
+
 
 }
