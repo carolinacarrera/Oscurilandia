@@ -14,7 +14,8 @@ public class Tablero {
 	public int numerosFila = 15;// numeros filas
 	public int numerosColumnas=15;// numeros columnas
 	public int carrosJugador; //carros jugadores
-	public String [][] tablero = new String[numerosFila][numerosColumnas];//tamaño tablero
+	
+	public char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 	
 	public static List<Carro> Carros = new ArrayList <Carro>(); //debe tener un maximo de 18 objetos, carros.
 	public List<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
@@ -157,6 +158,14 @@ public class Tablero {
 	
 	}
 	
+	public static void CrearKromi() {
+	}
+	
+	public static void CrearCaguanos() {
+	}
+	
+	public static void CrearTrupalla() {
+	}
 	
 }
 
