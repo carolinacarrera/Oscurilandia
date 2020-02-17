@@ -13,63 +13,53 @@ public class Tablero {
 
 	public static int numerosFila = 15;// numeros filas
 	public static int numerosColumnas=15;// numeros columnas
-	public int carrosJugador; //carros jugadores
+	
 
 	private static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 
-	public static List<Carro> Carros = new ArrayList <Carro>(); //debe tener un maximo de 18 objetos, carros.
+	private Carro carros[] = new Carro[18]; //debe tener un maximo de 18 objetos, carros.
 	public List<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
 
 	Scanner lector = new Scanner(System.in);
 
 
-	public int getNumerosFila() {
+	public static int getNumerosFila() {
 		return numerosFila;
 	}
 
 
-	public void setNumerosFila(int numerosFila) {
-		this.numerosFila = numerosFila;
+	public static void setNumerosFila(int numerosFila) {
+		Tablero.numerosFila = numerosFila;
 	}
 
 
-	public int getNumerosColumnas() {
+	public static int getNumerosColumnas() {
 		return numerosColumnas;
 	}
 
 
-	public void setNumerosColumnas(int numerosColumnas) {
-		this.numerosColumnas = numerosColumnas;
+	public static void setNumerosColumnas(int numerosColumnas) {
+		Tablero.numerosColumnas = numerosColumnas;
 	}
 
 
-	public int getCarrosJugador() {
-		return carrosJugador;
-	}
-
-
-	public void setCarrosJugador(int carrosJugador) {
-		this.carrosJugador = carrosJugador;
-	}
-
-
-	public char[][] getTablero() {
+	public static char[][] getTablero() {
 		return tablero;
 	}
 
 
-	public void setTablero(char[][] tablero) {
-		this.tablero = tablero;
+	public static void setTablero(char[][] tablero) {
+		Tablero.tablero = tablero;
 	}
 
 
-	public List<Carro> getCarros() {
-		return Carros;
+	public Carro[] getCarros() {
+		return carros;
 	}
 
 
-	public void setCarros(List<Carro> carros) {
-		Carros = carros;
+	public void setCarros(Carro[] carros) {
+		this.carros = carros;
 	}
 
 
@@ -92,26 +82,14 @@ public class Tablero {
 		this.lector = lector;
 	}
 
-	@Override
-	public String toString() {
-		return "Tablero [numerosFila=" + numerosFila + ", numerosColumnas=" + numerosColumnas + ", carrosJugador="
-				+ carrosJugador + ", tablero=" + Arrays.toString(tablero) + ", Carros=" + Carros + ", Huevos=" + Huevos
-				+ ", lector=" + lector + "]";
-	}
-
-
-	public Tablero(int numerosFila, int numerosColumnas, int carrosJugador, char[][] tablero, List<Carro> carros,
-			List<Huevo> huevos, Scanner lector) {
-		this.numerosFila = numerosFila;
-		this.numerosColumnas = numerosColumnas;
-		this.carrosJugador = carrosJugador;
-		this.tablero = tablero;
-		Carros = carros;
+	public Tablero(Carro[] carros, List<Huevo> huevos, Scanner lector) {
+		this.carros = carros;
 		Huevos = huevos;
 		this.lector = lector;
 	}
 
 
+	
 	/*public static void CrearCarro() {
 
 		JOptionPane.showMessageDialog(null, "Ingresa informacion Carros");
@@ -143,22 +121,12 @@ public class Tablero {
 	}*/	
 
 
-	public static void LanzarHuevo() {
-
+	public Tablero() {
+		// TODO Auto-generated constructor stub
 	}
 
 
-	public static void MostarMatriz() {
-		for (int i = 0; i < 15; i++) {
-			System.out.print("[ ]");
-			for (int j = 0; j <15; j++) {
-
-				System.out.print(tablero[i][j]+"[ ]");
-
-
-			}
-			System.out.println("");
-		}
+	public static void LanzarHuevo() {
 
 	}
 
@@ -168,6 +136,31 @@ public class Tablero {
 	}
 
 	
+	public void crearCarro() {
+		
+		carros[0] = CrearKromi();
+		carros[1] = CrearKromi();
+		carros[2] = CrearKromi();
+		carros[3] = crearCaguano();
+		carros[4] = crearCaguano();
+		carros[5] = crearCaguano();
+		carros[6] = crearCaguano();
+		carros[7] = crearCaguano();
+		carros[8] = crearTrupalla();
+		carros[9] = crearTrupalla();
+		carros[10] = crearTrupalla();
+		carros[11] = crearTrupalla();
+		carros[12] = crearTrupalla();
+		carros[13] = crearTrupalla();
+		carros[14] = crearTrupalla();
+		carros[15] = crearTrupalla();
+		carros[16] = crearTrupalla();
+		carros[17] = crearTrupalla();
+		
+				
+	}
+	
+
 	public Kromi CrearKromi() {
 		int x;
 		int y;
@@ -199,12 +192,75 @@ public class Tablero {
 	}		
 	
 
-	public static void CrearCaguanos() {
+	public Caguanos crearCaguano() {
+
+		int x;
+		int y;
+		
+		boolean posicionVacio= false;
+		
+		do {
+			x=(int)(Math.random()*15);
+			y=(int)(Math.random()*14);
+		
+			if (tablero[x][y]!='T' && tablero[x][y]!='C' && tablero[x][y]!='K') {
+			
+				if (tablero[x][y+1]!='T' && tablero[x][y+1]!='C' && tablero[x][y+1]!='K') {
+					
+						posicionVacio = true ;
+						tablero[x][y]='C';
+						tablero[x][y+1]='C';
+						
+						
+					
+				}
+			}
+			
+		
+		
+		}while(!posicionVacio);
+		
+		return new Caguanos(x,y);
+		
+		
+		
 	}
 
-	public static void CrearTrupalla() {
+	public Trupalla crearTrupalla() {
+		int x;
+		int y;
+		
+		boolean vacio= false;
+		
+		do {
+			x=(int)(Math.random()*15);
+			y=(int)(Math.random()*15);
+		
+			if (tablero[x][y]!='T' && tablero[x][y]!='C' && tablero[x][y]!='K') {
+	
+						vacio = true ;
+						tablero[x][y]='T';
+			}
+
+		}while(!vacio);
+		
+		return new Trupalla(x,y);
 	}
 
+	public static void MostarMatriz() {
+		for (int i = 0; i < 15; i++) {
+			System.out.print("|");
+			for (int j = 0; j <15; j++) {
 
+				System.out.print(tablero[i][j]+"|");
+
+
+			}
+			System.out.println("");
+		}
+
+	}
+	
+	
 }
 
