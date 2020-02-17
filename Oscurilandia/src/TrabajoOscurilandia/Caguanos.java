@@ -16,8 +16,8 @@ public class Caguanos extends Carro{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Kromi(int x, int y) {
-		super(x, y);
+	public Caguanos(int x, int y) {
+		super(x, fechaIngreso, y);
 	}
 
 	public String getTiro() {
