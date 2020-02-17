@@ -15,6 +15,10 @@ public class Caguanos extends Carro{
 		super(ocupantes, fechaIngreso, tamano);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Kromi(int x, int y) {
+		super(x, y);
+	}
 
 	public String getTiro() {
 		return tiro;

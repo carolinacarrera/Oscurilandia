@@ -13,6 +13,10 @@ public class Trupalla extends Carro {
 		super(ocupantes, fechaIngreso, tamano);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Trupalla(int x, int y) {
+		super(x, y);
+	}
 
 	public int getNivelArmadura() {
 		return NivelArmadura;

@@ -19,6 +19,10 @@ public class Kromi extends Carro {
 		this.marca = marca;
 	}
 
+	public Kromi(int x, int y) {
+		super(x, y);
+		
+	}
 	public String getAnioFabricacion() {
 		return anioFabricacion;
 	}
@@ -44,6 +48,6 @@ public class Kromi extends Carro {
 		System.out.println("Anio Fabricacion: " + getAnioFabricacion() + "\n Marca: " + getMarca() + "\nTamano: " + getTamano());
 	}
 	
-	
+
 
 }
