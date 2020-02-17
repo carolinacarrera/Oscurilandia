@@ -218,6 +218,7 @@ public class Tablero {
 					}
 				}
 			}
+		
 			
 		}while(!posicionVacia);
 		
