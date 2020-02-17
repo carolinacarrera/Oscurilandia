@@ -166,5 +166,6 @@ public class Tablero {
 	public static void CrearTrupalla() {
 	}
 	
+	
 }
 
