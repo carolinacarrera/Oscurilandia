@@ -47,14 +47,14 @@ public class Huevo {
 	}
 
 
-	public ArrayList<Huevo> getHuevos() {
+	/*public ArrayList<Huevo> getHuevos() {
 		return Huevos;
 	}
 
 
 	public void setHuevos(ArrayList<Huevo> huevos) {
 		Huevos = huevos;
-	}
+	}*/
 
 
 	public Huevo() {

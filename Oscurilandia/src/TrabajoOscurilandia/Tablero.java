@@ -1,12 +1,10 @@
 package TrabajoOscurilandia;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
-
 
 public class Tablero {
 
@@ -77,40 +75,6 @@ public class Tablero {
 	}
 
 	
-
-
-	
-	/*public static void CrearCarro() {
-
-		JOptionPane.showMessageDialog(null, "Ingresa informacion Carros");
-
-
-
-
-		for (int i = 1; i < 4; i++) {
-
-			String fechaIngreso = JOptionPane.showInputDialog("Ingrese Fecha Ingreso de Kromis: " + i);
-			String ocupantes = JOptionPane.showInputDialog("Ingrese Ocupantes de Kromis: " + i);
-
-
-		}
-
-		for (int j = 1; j < 8; j++) {
-
-			String distaciaTiro = JOptionPane.showInputDialog("Ingrese Distancia de Tiro de Caguano: " + j);
-			String colorConfeti = JOptionPane.showInputDialog("Ingrese color de confeti de Caguano: " + j);
-
-		}
-
-		for (int k = 1; k < 11; k++) {
-
-			String nivelArmadura = JOptionPane.showInputDialog("Ingrese Nivel Armadura Trupalla: " + k) ;
-
-		}	
-
-	}*/	
-
-
 	public void setHuevos(ArrayList<Huevo> huevos) {
 		Huevos = huevos;
 	}
@@ -122,30 +86,51 @@ public class Tablero {
 
 
 	public static void LanzarHuevo() {
-		System.out.println("... Lanzando huevo ...");
-		System.out.println("Ingrese fila: ");
-		int fila = lector.nextInt();
+		String opcionFila;
+		String opcionColumna;
 		
-		System.out.println("Ingrese columna: ");
-		int columna = lector.nextInt();
+		JOptionPane.showMessageDialog(null, "....Lanza tu huevo....");
+		opcionFila = JOptionPane.showInputDialog("Ingresa fila: ");
+				
+		//System.out.println("Ingrese fila: ");
+		//int fila = lector.nextInt();
+		
+		opcionColumna = JOptionPane.showInputDialog("Ingresa Columna: ");
+		
+		//System.out.println("Ingrese columna: ");
+		//int columna = lector.nextInt();
+		
+		int fila;
+		int columna;
+		
+		fila = Integer.parseInt(opcionFila);
+		columna = Integer.parseInt(opcionColumna);
+		
+		
 		
 		if (tablero[fila][columna] == 'K') {
 			tablero[fila][columna] = 'H';
-			puntaje = puntaje + 3;			
+			puntaje = puntaje + 3;
+			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
 		}
-		
-		if (tablero[fila][columna] == 'C') {
+		else if (tablero[fila][columna] == 'C') {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 2;
+			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
 		}
 		
-		if (tablero[fila][columna] == 'T') {
+		else if (tablero[fila][columna] == 'T') {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 1;
+			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
 		}
 		
+		else {
+			
+			tablero[fila][columna] = 'X';
+			JOptionPane.showMessageDialog(null, "Fallaste");
+		}
 	}
-
 
 	public static void CalcularPuntaje(){
 
@@ -153,6 +138,7 @@ public class Tablero {
 
 	
 	public void crearCarro() {
+		
 		
 		carros[0] = CrearKromi();
 		carros[1] = CrearKromi();
@@ -175,6 +161,7 @@ public class Tablero {
 	}
 	
 	public void calcularCarrosDestruidos() {
+		
 		for (int i=0; i<3;i++) {
 			Carro kro = carros[i];
 			int x = kro.getX();
@@ -196,13 +183,39 @@ public class Tablero {
 	
 
 	public Kromi CrearKromi() {
+		
 		int x;
 		int y;
+		int ocupante;
+		String fechaIngreso;
+		String marca;
+		String anioFabri;
 		
 		boolean  posicionVacia= false;
 		
-		do {
+		
+		ocupante = JOptionPane.showInputDialog("Ingresa cantidad de ocupantes: ").charAt(0);
+		//System.out.println("Ingrese cantidad de ocupantes: ");
+		//int ocupante = lector.nextInt();
+		
+		fechaIngreso = JOptionPane.showInputDialog("Fecha ingreso Kromis: ");
+		
+		//System.out.println("Ingrese Fecha Ingreso de Kromis: ");
+		//String fechaIngreso = lector.next();
+		
+		marca = JOptionPane.showInputDialog("Ingrese marca de la Kromi: ");
+		
+		//System.out.println("Ingrese marca Kromi");
+		//String marca = lector.next();
 			
+		anioFabri = JOptionPane.showInputDialog("Ingrese anio fabricacion: ");
+		
+		//System.out.println("Ingrese anio fabricacion: ");  
+		//String anioFabri = lector.next(); 
+	
+			
+			do {
+								
 			x=(int)(Math.random()*13);
 			y=(int)(Math.random()*15);
 		
@@ -219,20 +232,35 @@ public class Tablero {
 				}
 			}
 		
-			
 		}while(!posicionVacia);
 		
-		return new Kromi(x,y);
+		Kromi Kro = new Kromi(ocupante, fechaIngreso, x, y, anioFabri, marca);
 			
+		return Kro;
+				
 	}		
 	
-
 	public Caguanos crearCaguano() {
 
 		int x;
 		int y;
 		
 		boolean posicionVacio= false;
+		
+		System.out.println("... Creando Caguano ...");
+		
+		System.out.println("Ingrese cantidad de ocupantes: ");
+		int ocupantes = lector.nextInt();
+
+		System.out.println("Ingrese fecha: ");
+		String fechaing = lector.next();
+		
+		System.out.println("Ingrese tiro: ");
+		String tiro = lector.next();
+		
+		System.out.println("Color de Confetti: ");
+		String colorConfeti = lector.next();
+		
 		
 		do {
 			x=(int)(Math.random()*15);
@@ -252,10 +280,10 @@ public class Tablero {
 		
 		}while(!posicionVacio);
 		
-		return new Caguanos(x,y);
+		Caguanos cagua = new Caguanos (ocupantes,fechaing,x,y,tiro,colorConfeti);
 		
-		
-		
+		return cagua;
+				
 	}
 
 	public Trupalla crearTrupalla() {
@@ -263,6 +291,20 @@ public class Tablero {
 		int y;
 		
 		boolean vacio= false;
+		
+		System.out.println("... Creando Trupalla ...");
+		
+		System.out.println("Ingrese cantidad de ocupantes: ");
+		int ocupantes = lector.nextInt();
+
+		System.out.println("Ingrese fecha: ");
+		String fechaing = lector.next();
+		
+		System.out.println("Ingrese nivel de armadura: ");
+		int NivelArmadura = lector.nextInt();
+		
+
+		
 		
 		do {
 			x=(int)(Math.random()*15);
@@ -276,20 +318,21 @@ public class Tablero {
 
 		}while(!vacio);
 		
-		return new Trupalla(x,y);
+		Trupalla trupa = new Trupalla (ocupantes,fechaing,x,y,NivelArmadura);
+		
+		return trupa;
 	}
-
+	
 	public static void MostarMatriz() {
+		
+		System.out.println("---El tablero es el siguiente-- \n");
 		for (int i = 0; i < 15; i++) {
 			System.out.print("|");
 			for (int j = 0; j <15; j++) {
 				System.out.print(tablero[i][j]+"|");
-
-
 			}
 			System.out.println("");
 		}
-
 	}
 	
 	
