@@ -1,21 +1,32 @@
 package TrabajoOscurilandia;
-
+/**
+ * 
+ * Esta es la clase que representa a los clientes que se asociarán a los vendedores
+ * @author Nicolas Alarcón, Carolina Carrera
+ * @version: 20/02/2020
+ * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Huevo.java">Versión en Github</a>
+ *
+ */
 import java.util.ArrayList;
 
 
 
-/**
- * @author Nicolas Alarcón, Carolina Carrera, Alejandro Rojas
- *
- */
+
 
 public class Huevo {
-	
+	//Atributos de la clase
+
 	private int posicionFila;
 	private int posicionColumna;
 	private int puntaje;
 	
-
+	/**
+	 *
+	 * Constructores de la clase
+	 * @param posicionFila Posicion fila del huevo
+	 * @param posicionColumna Posicion columna del huevo
+	 * @param x puntaje Puntaje de destruccion
+	 */
 	
 	@Override
 	public String toString() {

@@ -1,10 +1,27 @@
 package TrabajoOscurilandia;
 
+/**
+ * 
+ * Esta es la clase que representa a los clientes que se asociarán a los vendedores
+ * @author Nicolas Alarcón, Carolina Carrera
+ * @version: 20/02/2020
+ * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Caguanos.java">Versión en Github</a>
+ *
+ */
+
+
 public class Caguanos extends Carro{
+	//Atributos de la clase
 
 	private String tiro;
 	private String colorConfeti;
 	
+	/**
+	 *
+	 * Constructores de la clase
+	 * @param tiro Tiro de huevo de parte de Caguano
+	 * @param colorConfeti Color de confeti de Caguano
+	 */
 	
 	public Caguanos(int ocupantes, String fechaIngreso, int x, int y, String tiro, String colorConfeti) {
 		super(ocupantes, fechaIngreso, x, y);

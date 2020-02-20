@@ -1,13 +1,29 @@
 package TrabajoOscurilandia;
 
+/**
+ * 
+ * Esta es la clase que representa a los clientes que se asociarán a los vendedores
+ * @author Nicolas Alarcón, Carolina Carrera
+ * @version: 20/02/2020
+ * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Kromi.java">Versión en Github</a>
+ *
+ */
+
 import javax.swing.JOptionPane;
 
 public class Kromi extends Carro {
 
+	//Atributos de la clase
+
 	public String anioFabricacion;
 	public String marca;
 	
-	
+	/**
+	 *
+	 * Constructores de la clase
+	 * @param anioFabricacion Año de fabricacion del kromi
+	 * @param marca Marca
+	 */
 
 	
 	public Kromi(int ocupantes, String fechaIngreso, int x, int y, String anioFabricacion, String marca) {

@@ -1,14 +1,30 @@
 package TrabajoOscurilandia;
-
+/**
+ * 
+ * Esta es la clase que representa a los clientes que se asociarán a los vendedores
+ * @author Nicolas Alarcón, Carolina Carrera
+ * @version: 20/02/2020
+ * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Carro.java">Versión en Github</a>
+ *
+ */
 //import javax.swing.JOptionPane;
 
 public class Carro {
+	//Atributos de la clase
 
 	private int ocupantes;
 	protected String fechaIngreso;
 	private int x;
 	private int y;
 
+	/**
+	 *
+	 * Constructores de la clase
+	 * @param ocupantes Ocupantes del kromi
+	 * @param fechaIngreso Fecha de ingreso del kromi
+	 * @param x Posicion fila de carros
+	 * @param y Posicion columna de carros
+	 */
 
 	public Carro(int ocupantes, String fechaIngreso, int x, int y) {
 		this.ocupantes = ocupantes;

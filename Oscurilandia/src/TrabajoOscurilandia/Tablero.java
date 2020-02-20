@@ -111,7 +111,7 @@ public class Tablero {
 		if (tablero[fila][columna] == 'K') {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 3;
-			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");zz
+			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
 		}
 		else if (tablero[fila][columna] == 'C') {
 			tablero[fila][columna] = 'H';
@@ -130,11 +130,10 @@ public class Tablero {
 			tablero[fila][columna] = 'X';
 			JOptionPane.showMessageDialog(null, "Fallaste");
 		}
-		
 	}
 
 	public static void CalcularPuntaje(){
-		//calcularCarrosDestruidos + puntaje
+		
 	}
 
 	
@@ -182,7 +181,6 @@ public class Tablero {
 		}	
 	}
 	
-
 	public Kromi CrearKromi() {
 		
 		int x;
@@ -245,23 +243,34 @@ public class Tablero {
 
 		int x;
 		int y;
+		int ocupantes;
+		String fechaing;
+		String tiro;
+		String colorConfeti;
 		
 		boolean posicionVacio= false;
 		
-		System.out.println("... Creando Caguano ...");
+		JOptionPane.showMessageDialog(null, ".....Creando Caguanos.....");
+		//System.out.println("... Creando Caguano ...");
 		
-		System.out.println("Ingrese cantidad de ocupantes: ");
-		int ocupantes = lector.nextInt();
-
-		System.out.println("Ingrese fecha: ");
-		String fechaing = lector.next();
+		ocupantes = JOptionPane.showInputDialog("Ingrese cantidad de ocupantes: ").charAt(0);
+		//System.out.println("Ingrese cantidad de ocupantes: ");
+		//int ocupantes = lector.nextInt();
 		
-		System.out.println("Ingrese tiro: ");
-		String tiro = lector.next();
+		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
 		
-		System.out.println("Color de Confetti: ");
-		String colorConfeti = lector.next();
+		//System.out.println("Ingrese fecha: ");
+		//String fechaing = lector.next();
 		
+		tiro = JOptionPane.showInputDialog("Ingrese largo de tiro: ");
+		
+		//System.out.println("Ingrese tiro: ");
+		//String tiro = lector.next();
+		
+		colorConfeti = JOptionPane.showInputDialog("Ingrese color confeti: ");
+		
+		//System.out.println("Color de Confetti: ");
+		//String colorConfeti = lector.next();
 		
 		do {
 			x=(int)(Math.random()*15);
@@ -290,22 +299,25 @@ public class Tablero {
 	public Trupalla crearTrupalla() {
 		int x;
 		int y;
+		int ocupantes;
+		String fechaing;
+		int nivelArmadura;
+		
 		
 		boolean vacio= false;
 		
-		System.out.println("... Creando Trupalla ...");
+		//System.out.println("... Creando Trupalla ...");
+		ocupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ").charAt(0);
+		//System.out.println("Ingrese cantidad de ocupantes: ");
+		//int ocupantes = lector.nextInt();
+		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
+		//System.out.println("Ingrese fecha: ");
+		//String fechaing = lector.next();
 		
-		System.out.println("Ingrese cantidad de ocupantes: ");
-		int ocupantes = lector.nextInt();
-
-		System.out.println("Ingrese fecha: ");
-		String fechaing = lector.next();
+		nivelArmadura = JOptionPane.showInputDialog("Ingresa armadura de Trupalla: ").charAt(0);
 		
-		System.out.println("Ingrese nivel de armadura: ");
-		int NivelArmadura = lector.nextInt();
-		
-
-		
+		//System.out.println("Ingrese nivel de armadura: ");
+		//int NivelArmadura = lector.nextInt();
 		
 		do {
 			x=(int)(Math.random()*15);
@@ -319,7 +331,7 @@ public class Tablero {
 
 		}while(!vacio);
 		
-		Trupalla trupa = new Trupalla (ocupantes,fechaing,x,y,NivelArmadura);
+		Trupalla trupa = new Trupalla (ocupantes,fechaing,x,y,nivelArmadura);
 		
 		return trupa;
 	}
