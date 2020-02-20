@@ -14,9 +14,10 @@ public class Juego {
 
 		JOptionPane.showMessageDialog(null, "BIENVENIDO A FIRSTLINE");
 		int opcion;
-		do {
+		
+		do { // apertura of do
 			
-		opcion = JOptionPane.showInputDialog("\n ****MENU**** \na.- Crear carros "
+		opcion = JOptionPane.showInputDialog("\n ****MENU**** \na.- Crear Carros "
 				+ "\nb.- Mostrar Matriz "
 				+ "\nc.- Lanzar Huevos "
 				+ "\nd.- Salir \n"
@@ -50,9 +51,9 @@ public class Juego {
 			default:
 				JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
 				return;
-			}
+			} //fin switch
 			
-			} while (opcion != 'd');
+			} while (opcion != 'd'); //fin of do
 
-	}
-}
+	} // fin main
+} // fin class

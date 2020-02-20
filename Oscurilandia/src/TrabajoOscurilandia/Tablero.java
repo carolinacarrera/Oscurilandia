@@ -111,7 +111,7 @@ public class Tablero {
 		if (tablero[fila][columna] == 'K') {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 3;
-			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
+			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");zz
 		}
 		else if (tablero[fila][columna] == 'C') {
 			tablero[fila][columna] = 'H';
@@ -130,10 +130,11 @@ public class Tablero {
 			tablero[fila][columna] = 'X';
 			JOptionPane.showMessageDialog(null, "Fallaste");
 		}
+		
 	}
 
 	public static void CalcularPuntaje(){
-
+		//calcularCarrosDestruidos + puntaje
 	}
 
 	
