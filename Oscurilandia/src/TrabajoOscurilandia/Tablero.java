@@ -181,7 +181,6 @@ public class Tablero {
 		}	
 	}
 	
-
 	public Kromi CrearKromi() {
 		
 		int x;
