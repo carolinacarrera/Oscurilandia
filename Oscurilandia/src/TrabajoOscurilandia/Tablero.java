@@ -300,22 +300,25 @@ public class Tablero {
 	public Trupalla crearTrupalla() {
 		int x;
 		int y;
+		int ocupantes;
+		String fechaing;
+		int nivelArmadura;
+		
 		
 		boolean vacio= false;
 		
-		System.out.println("... Creando Trupalla ...");
+		//System.out.println("... Creando Trupalla ...");
+		ocupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ").charAt(0);
+		//System.out.println("Ingrese cantidad de ocupantes: ");
+		//int ocupantes = lector.nextInt();
+		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
+		//System.out.println("Ingrese fecha: ");
+		//String fechaing = lector.next();
 		
-		System.out.println("Ingrese cantidad de ocupantes: ");
-		int ocupantes = lector.nextInt();
-
-		System.out.println("Ingrese fecha: ");
-		String fechaing = lector.next();
+		nivelArmadura = JOptionPane.showInputDialog("Ingresa armadura de Trupalla: ").charAt(0);
 		
-		System.out.println("Ingrese nivel de armadura: ");
-		int NivelArmadura = lector.nextInt();
-		
-
-		
+		//System.out.println("Ingrese nivel de armadura: ");
+		//int NivelArmadura = lector.nextInt();
 		
 		do {
 			x=(int)(Math.random()*15);
@@ -329,7 +332,7 @@ public class Tablero {
 
 		}while(!vacio);
 		
-		Trupalla trupa = new Trupalla (ocupantes,fechaing,x,y,NivelArmadura);
+		Trupalla trupa = new Trupalla (ocupantes,fechaing,x,y,nivelArmadura);
 		
 		return trupa;
 	}
