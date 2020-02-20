@@ -2,7 +2,7 @@ package TrabajoOscurilandia;
 
 /**
  * 
- * Esta es la clase que representa a los clientes que se asociarán a los vendedores
+ * Esta es la clase que representa al carro Caguanos
  * @author Nicolas Alarcón, Carolina Carrera
  * @version: 20/02/2020
  * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Caguanos.java">Versión en Github</a>
