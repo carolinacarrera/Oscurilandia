@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class Juego {
 
-	
+	//nuevo
 	static Tablero tablero1= new Tablero();
 	
 	public static void main(String[] args) {

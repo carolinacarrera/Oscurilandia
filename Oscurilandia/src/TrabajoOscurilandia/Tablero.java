@@ -135,10 +135,14 @@ public class Tablero {
 			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
 		}
 		
-		else if (tablero[fila][columna] == 'X') {
-			JOptionPane.showMessageDialog(null, "Ya ingresaste esas coordenadas");
+		else if (tablero[fila][columna] == 'H') {
+			tablero [fila][columna] = 'H';
+			JOptionPane.showMessageDialog(null, "Ya golpeaste a un Carro en esta posicion");
 		}
-			
+		
+		else if (tablero[fila][columna] == 'X')
+			JOptionPane.showMessageDialog(null, "Ya ocupaste esta coordenadas");
+		
 		else {
 			
 			tablero[fila][columna] = 'X';
