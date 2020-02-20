@@ -142,7 +142,6 @@ public class Tablero {
 		
 		else if (tablero[fila][columna] == 'X')
 			JOptionPane.showMessageDialog(null, "Ya ocupaste esta coordenadas");
-		
 		else {
 			
 			tablero[fila][columna] = 'X';
@@ -189,7 +188,7 @@ public class Tablero {
 		carros[17] = crearTrupalla();				
 	}
 	
-	public int calcularCarrosDestruidos() {
+	public void calcularCarrosDestruidos() {
 				
 		for (int i=0; i<3;i++) {
 			Carro kro = carros[i];
@@ -208,8 +207,7 @@ public class Tablero {
 				puntaje += 7;
 			}
 		}
-		puntajeCarros = puntaje;
-		return puntajeCarros;	
+		
 	}
 	
 	public Kromi CrearKromi() {
