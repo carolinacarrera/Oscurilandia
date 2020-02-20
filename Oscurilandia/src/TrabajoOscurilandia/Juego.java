@@ -19,7 +19,8 @@ public class Juego {
 		opcion = JOptionPane.showInputDialog("\n ****MENU**** \na.- Crear carros "
 				+ "\nb.- Mostrar Matriz "
 				+ "\nc.- Lanzar Huevos "
-				+ "\nd.- Salir \n"
+				+ "\nd.- Mostrar Puntaje"
+				+ "\ne.- Salir"
 				+ "\nIngresa Opcion: ").charAt(0);
 		
 			switch (opcion) {
@@ -27,8 +28,8 @@ public class Juego {
 			case 'a' :
 				JOptionPane.showMessageDialog(null,"Ingresaremos los siguientes carros:\n"
 						+ "\n3 Kromis" 
-						+ "\n7 Tupallas"
-						+ "\n8 Caguanos\n"
+						+ "\n10 Trupallas"
+						+ "\n5 Caguanos\n"
 						+ "\n Despues de ello..\n"
 						+ "\n COMENZARA LA REVELION"
 						+ "\n ");
@@ -44,15 +45,14 @@ public class Juego {
 				break;
 				
 			case 'd':
-				JOptionPane.showMessageDialog(null, "Adios");
+				Tablero.CalcularPuntaje();
 				break;
 				
 			default:
 				JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
-				return;
+				break;
 			}
 			
-			} while (opcion != 'd');
-
-	}
+			} while (opcion != 'e');
+		}
 }
