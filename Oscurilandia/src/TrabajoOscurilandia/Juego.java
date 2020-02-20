@@ -48,6 +48,10 @@ public class Juego {
 				Tablero.CalcularPuntaje();
 				break;
 				
+			case 'e':
+				JOptionPane.showMessageDialog(null, "Adios");
+				break;
+				
 			default:
 				JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
 				break;
