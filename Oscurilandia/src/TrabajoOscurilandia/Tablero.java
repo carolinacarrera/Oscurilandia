@@ -133,7 +133,7 @@ public class Tablero {
 	}
 
 	public static void CalcularPuntaje(){
-
+		
 	}
 
 	
@@ -244,23 +244,34 @@ public class Tablero {
 
 		int x;
 		int y;
+		int ocupantes;
+		String fechaing;
+		String tiro;
+		String colorConfeti;
 		
 		boolean posicionVacio= false;
 		
-		System.out.println("... Creando Caguano ...");
+		JOptionPane.showMessageDialog(null, ".....Creando Caguanos.....");
+		//System.out.println("... Creando Caguano ...");
 		
-		System.out.println("Ingrese cantidad de ocupantes: ");
-		int ocupantes = lector.nextInt();
-
-		System.out.println("Ingrese fecha: ");
-		String fechaing = lector.next();
+		ocupantes = JOptionPane.showInputDialog("Ingrese cantidad de ocupantes: ").charAt(0);
+		//System.out.println("Ingrese cantidad de ocupantes: ");
+		//int ocupantes = lector.nextInt();
 		
-		System.out.println("Ingrese tiro: ");
-		String tiro = lector.next();
+		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
 		
-		System.out.println("Color de Confetti: ");
-		String colorConfeti = lector.next();
+		//System.out.println("Ingrese fecha: ");
+		//String fechaing = lector.next();
 		
+		tiro = JOptionPane.showInputDialog("Ingrese largo de tiro: ");
+		
+		//System.out.println("Ingrese tiro: ");
+		//String tiro = lector.next();
+		
+		colorConfeti = JOptionPane.showInputDialog("Ingrese color confeti: ");
+		
+		//System.out.println("Color de Confetti: ");
+		//String colorConfeti = lector.next();
 		
 		do {
 			x=(int)(Math.random()*15);
