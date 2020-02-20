@@ -28,6 +28,7 @@ public class Huevo {
 	 * @param x puntaje Puntaje de destruccion
 	 */
 	
+	
 	@Override
 	public String toString() {
 		return "Huevo [posicionFila=" + posicionFila + ", posicionColumna=" + posicionColumna + ", puntaje=" + puntaje
