@@ -9,7 +9,6 @@ package TrabajoOscurilandia;
  *
  */
 
-import javax.swing.JOptionPane;
 
 public class Kromi extends Carro {
 
@@ -34,7 +33,7 @@ public class Kromi extends Carro {
 
 	public Kromi(int ocupantes, String fechaIngreso, int x, int y) {
 		super(ocupantes, fechaIngreso, x, y);
-		// TODO Auto-generated constructor stub
+		
 	} //fin constructor2
 
 	public Kromi(int x, int y) {

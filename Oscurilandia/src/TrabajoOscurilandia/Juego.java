@@ -1,21 +1,23 @@
 package TrabajoOscurilandia;
 
-import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
+/**
+ * @author Carolina Carrera, Nicolas Alarcon
+ * Inico de programa Oscurilandia, juego tipo Batalla Naval
+ */
 public class Juego {
 
 	
-	static Tablero tablero1= new Tablero();
+	static Tablero tablero1= new Tablero(); //instancia tablero
 	
 	public static void main(String[] args) {
-
-		// TODO Auto-generated method stub
 
 		JOptionPane.showMessageDialog(null, "BIENVENIDO A FIRSTLINE");
 		int opcion;
 		
-		do { // apertura of do
+		do { // ciclo menu
 			
 		opcion = JOptionPane.showInputDialog("\n ****MENU**** \na.- Crear Carros "
 				+ "\nb.- Mostrar Matriz "
@@ -53,17 +55,12 @@ public class Juego {
 				JOptionPane.showMessageDialog(null, "Adios");
 				break;
 				
-				
-				
 			default:
 				JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
-
-				return;
+				break;
 			} //fin switch
 
-				break;
-
-			} while (opcion != 'd'); //fin of do
+			} while (opcion != 'e'); //fin of do
 
 	} // fin main
 	} // fin class

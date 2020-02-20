@@ -12,7 +12,6 @@ public class Tablero {
 	public static int numerosFila = 15;// numeros filas
 	public static int numerosColumnas=15;// numeros columnas
 	
-	public static int puntajeCarros=0;
 	public static int puntaje = 0;
 	public static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 
@@ -36,15 +35,6 @@ public class Tablero {
 	}
 
 	
-	public static int getPuntajeCarros() {
-		return puntajeCarros;
-	}
-
-
-	public static void setPuntajeCarros(int puntajeCarros) {
-		Tablero.puntajeCarros = puntajeCarros;
-	}
-
 	public static void setNumerosColumnas(int numerosColumnas) {
 		Tablero.numerosColumnas = numerosColumnas;
 	}
@@ -78,12 +68,6 @@ public class Tablero {
 	public Scanner getLector() {
 		return lector;
 	}
-
-
-	public void setLector(Scanner lector) {
-		this.lector = lector;
-	}
-
 	
 	public void setHuevos(ArrayList<Huevo> huevos) {
 		Huevos = huevos;
@@ -91,7 +75,7 @@ public class Tablero {
 
 
 	public Tablero() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 
@@ -101,22 +85,14 @@ public class Tablero {
 		
 		JOptionPane.showMessageDialog(null, "....Lanza tu huevo....");
 		opcionFila = JOptionPane.showInputDialog("Ingresa fila: ");
-				
-		//System.out.println("Ingrese fila: ");
-		//int fila = lector.nextInt();
 		
 		opcionColumna = JOptionPane.showInputDialog("Ingresa Columna: ");
-		
-		//System.out.println("Ingrese columna: ");
-		//int columna = lector.nextInt();
 		
 		int fila;
 		int columna;
 		
 		fila = Integer.parseInt(opcionFila);
 		columna = Integer.parseInt(opcionColumna);
-		
-		
 		
 		if (tablero[fila][columna] == 'K') {
 			tablero[fila][columna] = 'H';
@@ -150,8 +126,7 @@ public class Tablero {
 	}
 
 	public static void CalcularPuntaje(){
-		
-		JOptionPane.showMessageDialog(null, "Tu puntaje es: " + (puntaje + puntajeCarros));
+		JOptionPane.showMessageDialog(null, "Tu puntaje es: " + puntaje);
 	}
 
 	
@@ -166,7 +141,6 @@ public class Tablero {
 
 
 	public void crearCarro() {
-		
 		
 		carros[0] = CrearKromi();
 		carros[1] = CrearKromi();
@@ -210,6 +184,7 @@ public class Tablero {
 		
 	}
 	
+
 	public Kromi CrearKromi() {
 		
 		int x;
@@ -224,27 +199,13 @@ public class Tablero {
 		String numOcupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ");
 		
 		int ocupante=Integer.parseInt(numOcupantes);
-		
-		
-		//System.out.println("Ingrese cantidad de ocupantes: ");
-		//int ocupante = lector.nextInt();
-		
+				
 		fechaIngreso = JOptionPane.showInputDialog("Fecha ingreso Kromis: ");
-		
-		//System.out.println("Ingrese Fecha Ingreso de Kromis: ");
-		//String fechaIngreso = lector.next();
-		
+				
 		marca = JOptionPane.showInputDialog("Ingrese marca de la Kromi: ");
-		
-		//System.out.println("Ingrese marca Kromi");
-		//String marca = lector.next();
-			
+					
 		anioFabri = JOptionPane.showInputDialog("Ingrese anio fabricacion: ");
-		
-		//System.out.println("Ingrese anio fabricacion: ");  
-		//String anioFabri = lector.next(); 
-	
-			
+					
 			do {
 								
 			x=(int)(Math.random()*13);
@@ -283,30 +244,17 @@ public class Tablero {
 		boolean posicionVacio= false;
 		
 		JOptionPane.showMessageDialog(null, ".....Creando Caguanos.....");
-		//System.out.println("... Creando Caguano ...");
-		
+				
 		String numOcupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ");
 		
 		int ocupantes =Integer.parseInt(numOcupantes);
 		
 		
-		//System.out.println("Ingrese cantidad de ocupantes: ");
-		//int ocupantes = lector.nextInt();
-		
 		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
 		
-		//System.out.println("Ingrese fecha: ");
-		//String fechaing = lector.next();
-		
 		tiro = JOptionPane.showInputDialog("Ingrese largo de tiro: ");
-		
-		//System.out.println("Ingrese tiro: ");
-		//String tiro = lector.next();
-		
+				
 		colorConfeti = JOptionPane.showInputDialog("Ingrese color confeti: ");
-		
-		//System.out.println("Color de Confetti: ");
-		//String colorConfeti = lector.next();
 		
 		do {
 			x=(int)(Math.random()*15);
@@ -322,8 +270,6 @@ public class Tablero {
 				}
 			}
 			
-		
-		
 		}while(!posicionVacio);
 		
 		Caguanos cagua = new Caguanos (ocupantes,fechaing,x,y,tiro,colorConfeti);
@@ -341,24 +287,16 @@ public class Tablero {
 		
 		boolean vacio= false;
 		
-		//System.out.println("... Creando Trupalla ...");
 		String numOcupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ");
 		
 		int ocupantes =Integer.parseInt(numOcupantes);
 		
-		//System.out.println("Ingrese cantidad de ocupantes: ");
-		//int ocupantes = lector.nextInt();
-		
 		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
-		//System.out.println("Ingrese fecha: ");
-		//String fechaing = lector.next();
 		
 		nivelArm = JOptionPane.showInputDialog("Ingresa armadura de Trupalla: ");
 		
 		int nivelArmadura = Integer.parseInt(nivelArm);
 		
-		//System.out.println("Ingrese nivel de armadura: ");
-		//int NivelArmadura = lector.nextInt();
 		
 		do {
 			x=(int)(Math.random()*15);
