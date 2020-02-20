@@ -53,6 +53,8 @@ public class Juego {
 				JOptionPane.showMessageDialog(null, "Adios");
 				break;
 				
+				
+				
 			default:
 				JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
 
