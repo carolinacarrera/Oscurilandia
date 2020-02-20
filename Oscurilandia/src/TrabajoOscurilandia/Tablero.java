@@ -12,6 +12,7 @@ public class Tablero {
 	public static int numerosFila = 15;// numeros filas
 	public static int numerosColumnas=15;// numeros columnas
 	
+	public static int puntajeCarros=0;
 	public static int puntaje = 0;
 	public static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 
@@ -34,6 +35,15 @@ public class Tablero {
 		return numerosColumnas;
 	}
 
+	
+	public static int getPuntajeCarros() {
+		return puntajeCarros;
+	}
+
+
+	public static void setPuntajeCarros(int puntajeCarros) {
+		Tablero.puntajeCarros = puntajeCarros;
+	}
 
 	public static void setNumerosColumnas(int numerosColumnas) {
 		Tablero.numerosColumnas = numerosColumnas;
@@ -125,6 +135,14 @@ public class Tablero {
 			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
 		}
 		
+		else if (tablero[fila][columna] == 'H') {
+			tablero [fila][columna] = 'H';
+			JOptionPane.showMessageDialog(null, "Ya golpeaste a un Carro en esta posicion");
+		}
+		
+		else if (tablero[fila][columna] == 'X')
+			JOptionPane.showMessageDialog(null, "Ya ocupaste esta coordenadas");
+		
 		else {
 			
 			tablero[fila][columna] = 'X';
@@ -134,9 +152,20 @@ public class Tablero {
 
 	public static void CalcularPuntaje(){
 		
+		JOptionPane.showMessageDialog(null, "Tu puntaje es: " + (puntaje + puntajeCarros));
 	}
 
 	
+	public static int getPuntaje() {
+		return puntaje;
+	}
+
+
+	public static void setPuntaje(int puntaje) {
+		Tablero.puntaje = puntaje;
+	}
+
+
 	public void crearCarro() {
 		
 		
@@ -160,8 +189,8 @@ public class Tablero {
 		carros[17] = crearTrupalla();				
 	}
 	
-	public void calcularCarrosDestruidos() {
-		
+	public int calcularCarrosDestruidos() {
+				
 		for (int i=0; i<3;i++) {
 			Carro kro = carros[i];
 			int x = kro.getX();
@@ -178,14 +207,15 @@ public class Tablero {
 			if (tablero[x][y] == 'H' && tablero[x][y+1] == 'H') {
 				puntaje += 7;
 			}
-		}	
+		}
+		puntajeCarros = puntaje;
+		return puntajeCarros;	
 	}
 	
 	public Kromi CrearKromi() {
 		
 		int x;
 		int y;
-		int ocupante;
 		String fechaIngreso;
 		String marca;
 		String anioFabri;
@@ -193,7 +223,11 @@ public class Tablero {
 		boolean  posicionVacia= false;
 		
 		
-		ocupante = JOptionPane.showInputDialog("Ingresa cantidad de ocupantes: ").charAt(0);
+		String numOcupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ");
+		
+		int ocupante=Integer.parseInt(numOcupantes);
+		
+		
 		//System.out.println("Ingrese cantidad de ocupantes: ");
 		//int ocupante = lector.nextInt();
 		
@@ -233,6 +267,7 @@ public class Tablero {
 		
 		}while(!posicionVacia);
 		
+		
 		Kromi Kro = new Kromi(ocupante, fechaIngreso, x, y, anioFabri, marca);
 			
 		return Kro;
@@ -243,7 +278,6 @@ public class Tablero {
 
 		int x;
 		int y;
-		int ocupantes;
 		String fechaing;
 		String tiro;
 		String colorConfeti;
@@ -253,7 +287,11 @@ public class Tablero {
 		JOptionPane.showMessageDialog(null, ".....Creando Caguanos.....");
 		//System.out.println("... Creando Caguano ...");
 		
-		ocupantes = JOptionPane.showInputDialog("Ingrese cantidad de ocupantes: ").charAt(0);
+		String numOcupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ");
+		
+		int ocupantes =Integer.parseInt(numOcupantes);
+		
+		
 		//System.out.println("Ingrese cantidad de ocupantes: ");
 		//int ocupantes = lector.nextInt();
 		
@@ -299,22 +337,27 @@ public class Tablero {
 	public Trupalla crearTrupalla() {
 		int x;
 		int y;
-		int ocupantes;
 		String fechaing;
-		int nivelArmadura;
+		String nivelArm;
 		
 		
 		boolean vacio= false;
 		
 		//System.out.println("... Creando Trupalla ...");
-		ocupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ").charAt(0);
+		String numOcupantes = JOptionPane.showInputDialog("Ingrese numero de ocupantes: ");
+		
+		int ocupantes =Integer.parseInt(numOcupantes);
+		
 		//System.out.println("Ingrese cantidad de ocupantes: ");
 		//int ocupantes = lector.nextInt();
+		
 		fechaing = JOptionPane.showInputDialog("Ingrese fecha ingreso: ");
 		//System.out.println("Ingrese fecha: ");
 		//String fechaing = lector.next();
 		
-		nivelArmadura = JOptionPane.showInputDialog("Ingresa armadura de Trupalla: ").charAt(0);
+		nivelArm = JOptionPane.showInputDialog("Ingresa armadura de Trupalla: ");
+		
+		int nivelArmadura = Integer.parseInt(nivelArm);
 		
 		//System.out.println("Ingrese nivel de armadura: ");
 		//int NivelArmadura = lector.nextInt();
