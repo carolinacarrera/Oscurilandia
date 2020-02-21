@@ -15,7 +15,7 @@ public class Tablero {
 	public static int puntaje = 0;
 	public static char [][] tablero = new char[numerosFila][numerosColumnas];//tamaño tablero
 
-	private Carro carros[] = new Carro[18]; //debe tener un maximo de 18 objetos, carros.
+	private static Carro carros[] = new Carro[18]; //debe tener un maximo de 18 objetos, carros.
 	public ArrayList<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
 	private static Scanner lector = new Scanner(System.in);
 
@@ -123,6 +123,25 @@ public class Tablero {
 			tablero[fila][columna] = 'X';
 			JOptionPane.showMessageDialog(null, "Fallaste");
 		}
+		
+		for (int i=0; i<3;i++) {
+			Carro kro = carros[i];
+			int x = kro.getX();
+			int y = kro.getY();
+			if (tablero[x][y] == 'H' && tablero[x+1][y] == 'H' && tablero[x+2][y] == 'H') {
+				puntaje += 10;
+			}
+		}
+		
+		for (int i=3; i<8;i++) {
+			Carro cag = carros[i];
+			int x = cag.getX();
+			int y = cag.getY();
+			if (tablero[x][y] == 'H' && tablero[x][y+1] == 'H') {
+				puntaje += 7;
+			}
+		}
+		
 	}
 
 	public static void CalcularPuntaje(){
@@ -162,7 +181,7 @@ public class Tablero {
 		carros[17] = crearTrupalla();				
 	}
 	
-	public void calcularCarrosDestruidos() {
+	/*public void calcularCarrosDestruidos() {
 				
 		for (int i=0; i<3;i++) {
 			Carro kro = carros[i];
@@ -182,7 +201,7 @@ public class Tablero {
 			}
 		}
 		
-	}
+	}*/
 	
 
 	public Kromi CrearKromi() {
