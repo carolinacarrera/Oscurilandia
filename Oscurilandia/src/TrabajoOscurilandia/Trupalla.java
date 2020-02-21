@@ -16,33 +16,33 @@ public class Trupalla extends Carro { //apertura class
 
 	/**
 	 *
-	 * Constructores de la clase
+	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param NivelArmadura Nivel de la armadura
 	 */
 
 	public Trupalla(int ocupantes, String fechaIngreso, int x, int y, int nivelArmadura) { //apertura constructor2
 		super(ocupantes, fechaIngreso, x, y);
 		NivelArmadura = nivelArmadura;
-	} //fin constructor2
+	} //cierre del constructor
 
 	public Trupalla(int ocupantes, String fechaIngreso, int x, int y) { //apertura constructor2
 		super(ocupantes, fechaIngreso, x, y);
 		// TODO Auto-generated constructor stub
-	} //fin constructor2
+	} //cierre del constructor
 
 	public Trupalla(int x, int y) { //apertura constructor por defecto
 		super(x, y);
-	} //fin constructor por defecto
+	} //cierre del constructor por defecto
 
 	public int getNivelArmadura() { 
 		return NivelArmadura;
-	} //fin getter de NivelArmadura
+	} //cierre getter de NivelArmadura
 
 	public void setNivelArmadura(int nivelArmadura) {
 		NivelArmadura = nivelArmadura;
-	}//fin setter de NivelArmadura
+	}//cierre setter de NivelArmadura
 
 
 
 
-} //fin class
+} //cierre class

@@ -14,7 +14,7 @@ public class Huevo {
 	
 	/**
 	 *
-	 * Constructores de la clase
+	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param posicionFila Posicion fila del huevo
 	 * @param posicionColumna Posicion columna del huevo
 	 * @param x puntaje Puntaje de destruccion
@@ -25,44 +25,44 @@ public class Huevo {
 	public String toString() {
 		return "Huevo [posicionFila=" + posicionFila + ", posicionColumna=" + posicionColumna + ", puntaje=" + puntaje
 				+ "]";
-	} //fin toString
+	} //cierre toString
 
 
 	public int getPosicionFila() {
 		return posicionFila;
-	} //fin Getter POsicionFila
+	} //cierre Getter POsicionFila
 
 
 	public void setPosicionFila(int posicionFila) {
 		this.posicionFila = posicionFila;
-	}// fin Setter PosicionFila
+	} //cierre Setter PosicionFila
 
 
 	public int getPosicionColumna() {
 		return posicionColumna;
-	} // fin Getter PosicionColumna
+	} //cierre Getter PosicionColumna
 
 
 	public void setPosicionColumna(int posicionColumna) {
 		this.posicionColumna = posicionColumna;
-	} // fin Setter PosicionColumna
+	} //cierre Setter PosicionColumna
 
 
 	public int getPuntaje() {
 		return puntaje;
-	} // fin Getter Puntaje
+	} //cierre Getter Puntaje
 
 
 	public void setPuntaje(int puntaje) {
 		this.puntaje = puntaje;
-	} //fin Setter Puntaje
+	} //cierre Setter Puntaje
 
 
 
 	public Huevo() {
 		super();
 		// TODO Auto-generated constructor stub
-	} //fin constructor por defecto
+	} //cierre constructor por defecto
 
 
 	public Huevo(int posicionFila, int posicionColumna, int puntaje, ArrayList<Huevo> huevos) {
@@ -70,18 +70,18 @@ public class Huevo {
 		this.posicionFila = posicionFila;
 		this.posicionColumna = posicionColumna;
 		this.puntaje = puntaje;
-	} // fin constructor
+	} //cierre constructor
 
 	
 	static void mostrarColumna() {
 			
-	} //fin metodo mostrarColumna
+	} //cierre metodo mostrarColumna
 	
 	
 	static void mostrarPuntaje() {
 		
-	} // fin metodo mostrarPuntaje
+	} //cierre metodo mostrarPuntaje
 	
 	
 	
-} //fin class
+} //cierre class

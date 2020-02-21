@@ -19,7 +19,7 @@ public class Carro {
 
 	/**
 	 *
-	 * Constructores de la clase
+	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param ocupantes Ocupantes del kromi
 	 * @param fechaIngreso Fecha de ingreso del kromi
 	 * @param x Posicion fila de carros
@@ -31,60 +31,64 @@ public class Carro {
 		this.fechaIngreso = fechaIngreso;
 		this.x = x;
 		this.y = y;
-	} //fin constructor
+	} //cierre constructor
 	
 	
 	public Carro(int x, int y) {
 		super();
 		this.x = x;
 		this.y = y;
-	} //fin constructor2
+	} //cierre constructor2
 
 	
 	public int getOcupantes() {
 		return ocupantes;
-	} //fin Getter Ocupantes
+	} //cierre Getter Ocupantes
 
 
 	public void setOcupantes(int ocupantes) {
 		this.ocupantes = ocupantes;
-	} //fin Setter Ocupantes
+	} //cierre Setter Ocupantes
 
 
 	public String getFechaIngreso() {
 		return fechaIngreso;
-	} // fin Getter FechaIngreso
+	} //cierre Getter FechaIngreso
 
 
 	public void setFechaIngreso(String fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
-	} //fin setter FechaIngreso
+	} //cierre setter FechaIngreso
 
 
 	@Override
 	public String toString() {
 		return "Carro [ocupantes=" + ocupantes + ", fechaIngreso=" + fechaIngreso + "]" ;
-	} //fin toString
+	} //cierre toString
 
+	/**
+	 * Método que imprime en consola los datos básicos de la clase Carro
+	 */
+	
 	public void imprimir() {
 		System.out.println("Ocupantes: " + getOcupantes());
-	} //fin metodo imprimir
+	} //cierre metodo imprimir
 
 	public int getX() {
 		return x;
-	} //fin getter X
+	} //cierre getter X
 
 	public void setX(int x) {
 		this.x = x;
-	} //fin setter X
+	} //cierre setter X
 
 	public int getY() {
 		return y;
-	} //fin getter Y
+	} //cierre getter Y
 
 	public void setY(int y) {
 		this.y = y;
-	} //fin setter Y
+	} //cierre setter Y
 
 
-} // fin class
+} //cierre class

@@ -18,7 +18,7 @@ public class Caguanos extends Carro{
 	
 	/**
 	 *
-	 * Constructores de la clase
+	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param tiro Tiro de huevo de parte de Caguano
 	 * @param colorConfeti Color de confeti de Caguano
 	 */
@@ -27,40 +27,43 @@ public class Caguanos extends Carro{
 		super(ocupantes, fechaIngreso, x, y);
 		this.tiro = tiro;
 		this.colorConfeti = colorConfeti;
-	} //fin constructor
+	} //cierre constructor
 
 	public Caguanos(int ocupantes, String fechaIngreso, int x, int y) {
 		super(ocupantes, fechaIngreso, x, y);
 		// TODO Auto-generated constructor stub
-	} //fin constructor2
+	} //cierre constructor2
 
 	public Caguanos(int x, int y) {
 		super(x, y);
-	} // fin constructor por defecto
+	} //cierre constructor por defecto
 
 	public String getTiro() {
 		return tiro;
-	} // fin Getter Tiro
+	} //cierre Getter Tiro
 
 	public void setTiro(String tiro) {
 		this.tiro = tiro;
-	} //fin Setter Tiro
+	} //cierre Setter Tiro
 
 	public String getColorConfeti() {
 		return colorConfeti;
-	} //fin Getter ColorConfeti
+	} //cierre Getter ColorConfeti
 
 	public void setColorConfeti(String colorConfeti) {
 		this.colorConfeti = colorConfeti;
-	} //fin Setter ColorConfeti
+	} //cierre Setter ColorConfeti
 
 	@Override
 	public String toString() {
 		return "Caguanos [tiro=" + tiro + ", colorConfeti=" + colorConfeti +"]";
-	} // fin toString
+	} //cierre toString
 
+	/**
+	 * Método que imprime en consola los datos básicos de la clase Caguanos
+	 */
 	public void imprimir() {
 		System.out.println("Tiro: " + getTiro() + "\nColor confeti: " + getColorConfeti());
-	} //fin metodo imprimir
+	} //cierre metodo imprimir
 	
-} //fin class
+} //cierre class

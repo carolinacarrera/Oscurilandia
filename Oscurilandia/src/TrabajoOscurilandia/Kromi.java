@@ -19,7 +19,7 @@ public class Kromi extends Carro {
 	
 	/**
 	 *
-	 * Constructores de la clase
+	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param anioFabricacion Año de fabricacion del kromi
 	 * @param marca Marca
 	 */
@@ -29,42 +29,46 @@ public class Kromi extends Carro {
 		super(ocupantes, fechaIngreso, x, y);
 		this.anioFabricacion = anioFabricacion;
 		this.marca = marca;
-	} //fin constructor
+	} //cierre del constructor
 
 	public Kromi(int ocupantes, String fechaIngreso, int x, int y) {
 		super(ocupantes, fechaIngreso, x, y);
 		
-	} //fin constructor2
+	} //cierre del constructor2
 
 	public Kromi(int x, int y) {
 		super(x, y);
-	} //fin constructor
+	} //cierre del constructor
 	
 	public String getAnioFabricacion() {
 		return anioFabricacion;
-	} //fin Getter AnioFabricacion
+	} //cierre Getter AnioFabricacion
 
 	public void setAnioFabricacion(String anioFabricacion) {
 		this.anioFabricacion = anioFabricacion;
-	} //fin Setter AnioFabricacion
+	} //cierre Setter AnioFabricacion
 
 	public String getMarca() {
 		return marca;
-	} //fin Getter Marca
+	} //cierre Getter Marca
 
 	public void setMarca(String marca) {
 		this.marca = marca;
-	} //fin Setter Marca
+	} //cierre Setter Marca
 
 	@Override
 	public String toString() {
 		return "Kromi [anioFabricacion=" + anioFabricacion + ", marca=" + marca + "]";
-	} // fin toString
+	} //cierre toString
 
+	
+	/**
+	 * Método que imprime en consola los datos básicos de la clase Kromi
+	 */
 	public void imprimir() {
 		System.out.println("Anio Fabricacion: " + getAnioFabricacion() + "\n Marca: " + getMarca());
-	} // fin metodo imprimir
+	} //cierre metodo imprimir
 	
 
 
-} //fin class
+} //cierre class

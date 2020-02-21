@@ -142,21 +142,21 @@ public class Tablero {
 			}
 		}
 		
-	}
+	} //cierre metodo lanzar huevo
 
 	public static void CalcularPuntaje(){
 		JOptionPane.showMessageDialog(null, "Tu puntaje es: " + puntaje);
-	}
+	} // cierre metodo Calcular Puntaje
 
 	
 	public static int getPuntaje() {
 		return puntaje;
-	}
+	} //cierre Getter puntaje
 
 
 	public static void setPuntaje(int puntaje) {
 		Tablero.puntaje = puntaje;
-	}
+	} //cierre Setter puntaje
 
 
 	public void crearCarro() {
@@ -179,29 +179,8 @@ public class Tablero {
 		carros[15] = crearTrupalla();
 		carros[16] = crearTrupalla();
 		carros[17] = crearTrupalla();				
-	}
+	} //cierre lista carros array
 	
-	/*public void calcularCarrosDestruidos() {
-				
-		for (int i=0; i<3;i++) {
-			Carro kro = carros[i];
-			int x = kro.getX();
-			int y = kro.getY();
-			if (tablero[x][y] == 'H' && tablero[x+1][y] == 'H' && tablero[x+2][y] == 'H') {
-				puntaje += 10;
-			}
-		}
-		
-		for (int i=3; i<8;i++) {
-			Carro cag = carros[i];
-			int x = cag.getX();
-			int y = cag.getY();
-			if (tablero[x][y] == 'H' && tablero[x][y+1] == 'H') {
-				puntaje += 7;
-			}
-		}
-		
-	}*/
 	
 
 	public Kromi CrearKromi() {
@@ -240,17 +219,17 @@ public class Tablero {
 						tablero[x+2][y]='K';
 						
 					}
-				}
-			}
+				}//cierre if 
+			} //cierre if 
 		
-		}while(!posicionVacia);
+		}while(!posicionVacia); //cierre ciclo do while
 		
 		
 		Kromi Kro = new Kromi(ocupante, fechaIngreso, x, y, anioFabri, marca);
 			
 		return Kro;
 				
-	}		
+	} //cierre constructor Crear Kromi
 	
 	public Caguanos crearCaguano() {
 
@@ -287,15 +266,15 @@ public class Tablero {
 						tablero[x][y]='C';
 						tablero[x][y+1]='C';
 				}
-			}
+			}//cierre if
 			
-		}while(!posicionVacio);
+		}while(!posicionVacio); //cierre ciclo do while
 		
 		Caguanos cagua = new Caguanos (ocupantes,fechaing,x,y,tiro,colorConfeti);
 		
 		return cagua;
 				
-	}
+	} //cierre constructor Crear Caguano
 
 	public Trupalla crearTrupalla() {
 		int x;
@@ -325,14 +304,14 @@ public class Tablero {
 	
 						vacio = true ;
 						tablero[x][y]='T';
-			}
+			} 
 
-		}while(!vacio);
+		}while(!vacio); //cierre cierre del ciclo do while
 		
 		Trupalla trupa = new Trupalla (ocupantes,fechaing,x,y,nivelArmadura);
 		
 		return trupa;
-	}
+	} //cierre metodo crearTrupalla
 	
 	public static void MostarMatriz() {
 		
@@ -341,11 +320,11 @@ public class Tablero {
 			System.out.print("|");
 			for (int j = 0; j <15; j++) {
 				System.out.print(tablero[i][j]+"|");
-			}
+			} //cierre ciclo for
 			System.out.println("");
-		}
-	}
+		} //cierre ciclo for
+	} //cierre metodo MostrarMatriz
 	
 	
-}
+} //cierre clase
 

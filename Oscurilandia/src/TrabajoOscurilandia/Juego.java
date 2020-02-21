@@ -58,9 +58,9 @@ public class Juego {
 			default:
 				JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
 				break;
-			} //fin switch
+			} //cierre switch
 
 			} while (opcion != 'e'); //fin of do
 
-	} // fin main
-	} // fin class
+	} //cierre main
+	} //cierre class
