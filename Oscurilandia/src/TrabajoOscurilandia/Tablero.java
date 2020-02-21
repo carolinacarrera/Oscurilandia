@@ -247,7 +247,7 @@ public class Tablero {
 	
 	
 	/**
-	 * Método crearCaguano para crear Caguano
+	 * @return crearCaguano para crear Caguanos
 	 */
 	
 	public Caguanos crearCaguano() {
@@ -297,8 +297,7 @@ public class Tablero {
 
 	
 	/**
-	 * Método crearTrupalla para crear Trupalla
-	 */
+	 * @return crearTrupalla para crear Kromi	 */
 	
 	
 	public Trupalla crearTrupalla() {
