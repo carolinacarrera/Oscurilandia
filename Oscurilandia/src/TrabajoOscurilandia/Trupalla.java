@@ -4,12 +4,12 @@ package TrabajoOscurilandia;
  * 
  * Esta es la clase que representa a los carros Trupalla
  * @author Nicolas Alarcón, Carolina Carrera
- * @version: 20/02/2020
+ * @version 20/02/2020
  * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Trupalla.java">Versión en Github</a>
  *
  */
 
-public class Trupalla extends Carro { //apertura class
+public class Trupalla extends Carro { 
 	//Atributos de la clase
 
 	private int NivelArmadura;
@@ -20,17 +20,17 @@ public class Trupalla extends Carro { //apertura class
 	 * @param NivelArmadura Nivel de la armadura
 	 */
 
-	public Trupalla(int ocupantes, String fechaIngreso, int x, int y, int nivelArmadura) { //apertura constructor2
+	public Trupalla(int ocupantes, String fechaIngreso, int x, int y, int nivelArmadura) { 
 		super(ocupantes, fechaIngreso, x, y);
 		NivelArmadura = nivelArmadura;
 	} //cierre del constructor
 
-	public Trupalla(int ocupantes, String fechaIngreso, int x, int y) { //apertura constructor2
+	public Trupalla(int ocupantes, String fechaIngreso, int x, int y) { 
 		super(ocupantes, fechaIngreso, x, y);
 		// TODO Auto-generated constructor stub
 	} //cierre del constructor
 
-	public Trupalla(int x, int y) { //apertura constructor por defecto
+	public Trupalla(int x, int y) { 
 		super(x, y);
 	} //cierre del constructor por defecto
 

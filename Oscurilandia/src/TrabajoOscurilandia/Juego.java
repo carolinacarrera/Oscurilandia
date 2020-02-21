@@ -4,7 +4,7 @@ package TrabajoOscurilandia;
  * 
  * Inico de programa Oscurilandia, juego tipo Batalla Naval
  * @author Nicolas Alarcón, Carolina Carrera
- * @version: 20/02/2020
+ * @version 20/02/2020
  * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Juego.java">Versión en Github</a>
  *
  */

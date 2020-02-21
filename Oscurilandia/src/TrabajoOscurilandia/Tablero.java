@@ -4,7 +4,7 @@ package TrabajoOscurilandia;
  * 
  * Esta es la clase que representa al tablero
  * @author Nicolas Alarcón, Carolina Carrera
- * @version: 20/02/2020
+ * @version 21/02/2020
  * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Tablero.java">Versión en Github</a>
  *
  */
@@ -85,10 +85,7 @@ public class Tablero {
 
 	
 	/**
-	 *
-	 * Constructor de la clase
-	 * @param opcionFila Recoge posicion de ataque en las filas
-	 * @param opcionColumna Recoge posicion de ataque en las columnas
+	 * Método para lanzar huevo y calcular puntaje
 	 */
 	
 	public static void LanzarHuevo() {
@@ -196,13 +193,7 @@ public class Tablero {
 	
 	
 	/**
-	 *
-	 * Constructor de la clase
-	 * @param x Posicion aleatoria en la fila
-	 * @param y Posicion aleatoria en las columnas
-	 * @param marca Marca de Kromi
-	 * @param anioFabri Año de fabricacion de Kromi
-
+	 * Método para crear Kromi
 	 */
 	
 	public Kromi CrearKromi() {
@@ -255,14 +246,7 @@ public class Tablero {
 	
 	
 	/**
-	 *
-	 * Constructor de la clase
-	 * @param x Posicion aleatoria en la fila
-	 * @param y Posicion aleatoria en las columnas
-	 * @param fechaing Fecha de ingreso de Caguano
-	 * @param tiro tiro de Caguano
-	 * @param colorConfeti Color de confeti de Caguano
-
+	 * Método para crear Caguano
 	 */
 	
 	public Caguanos crearCaguano() {
@@ -312,13 +296,7 @@ public class Tablero {
 
 	
 	/**
-	 *
-	 * Constructor de la clase
-	 * @param x Posicion aleatoria en la fila
-	 * @param y Posicion aleatoria en las columnas
-	 * @param fechaing Fecha de ingreso de Trupalla
-	 * @param nivelArm Nivel de armamento de Trupalla
-
+	 * Método para crear Trupalla
 	 */
 	
 	

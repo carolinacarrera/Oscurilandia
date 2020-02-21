@@ -4,7 +4,7 @@ package TrabajoOscurilandia;
  * 
  * Esta es la clase que representa a los carros Caguanos
  * @author Nicolas Alarcón, Carolina Carrera
- * @version: 20/02/2020
+ * @version 20/02/2020
  * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Caguanos.java">Versión en Github</a>
  *
  */

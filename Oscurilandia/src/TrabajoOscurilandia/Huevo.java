@@ -4,7 +4,7 @@ package TrabajoOscurilandia;
  * 
  * Esta es la clase que representa a los proyectiles huevos
  * @author Nicolas Alarcón, Carolina Carrera
- * @version: 20/02/2020
+ * @version 20/02/2020
  * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Huevo.java">Versión en Github</a>
  *
  */
@@ -24,7 +24,7 @@ public class Huevo {
 	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param posicionFila Posicion fila del huevo
 	 * @param posicionColumna Posicion columna del huevo
-	 * @param x puntaje Puntaje de destruccion
+	 * @param puntaje Puntaje de destruccion
 	 */
 	
 	
