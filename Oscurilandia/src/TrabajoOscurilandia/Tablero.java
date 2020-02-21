@@ -193,7 +193,7 @@ public class Tablero {
 	
 	
 	/**
-	 * Método CrearKromi para crear Kromi
+	 * @return CrearKromi para crear Kromi
 	 */
 	
 	public Kromi CrearKromi() {
