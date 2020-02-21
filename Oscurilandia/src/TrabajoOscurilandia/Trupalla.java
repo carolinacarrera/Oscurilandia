@@ -17,7 +17,11 @@ public class Trupalla extends Carro {
 	/**
 	 *
 	 * Constructor de la clase, usa los mismos parámetros que su clase padre
-	 * @param NivelArmadura Nivel de la armadura
+	 * @param nivelArmadura Nivel de la armadura
+	 * @param ocupantes Ocupantes del kromi
+	 * @param fechaIngreso Fecha de ingreso del kromi
+	 * @param x Posicion fila de carros
+	 * @param y Posicion columna de carros
 	 */
 
 	public Trupalla(int ocupantes, String fechaIngreso, int x, int y, int nivelArmadura) { 
