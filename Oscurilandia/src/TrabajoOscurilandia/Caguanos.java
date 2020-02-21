@@ -21,6 +21,10 @@ public class Caguanos extends Carro{
 	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param tiro Tiro de huevo de parte de Caguano
 	 * @param colorConfeti Color de confeti de Caguano
+	 * @param ocupantes Ocupantes del kromi
+	 * @param fechaIngreso Fecha de ingreso del kromi
+	 * @param x Posicion fila de carros
+	 * @param y Posicion columna de carros
 	 */
 	
 	public Caguanos(int ocupantes, String fechaIngreso, int x, int y, String tiro, String colorConfeti) {

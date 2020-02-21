@@ -22,6 +22,10 @@ public class Kromi extends Carro {
 	 * Constructor de la clase, usa los mismos parámetros que su clase padre
 	 * @param anioFabricacion Año de fabricacion del kromi
 	 * @param marca Marca
+	 * @param ocupantes Ocupantes del kromi
+	 * @param fechaIngreso Fecha de ingreso del kromi
+	 * @param x Posicion fila de carros
+	 * @param y Posicion columna de carros
 	 */
 
 	

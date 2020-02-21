@@ -193,7 +193,7 @@ public class Tablero {
 	
 	
 	/**
-	 * Método para crear Kromi
+	 * Método CrearKromi para crear Kromi
 	 */
 	
 	public Kromi CrearKromi() {
@@ -246,7 +246,7 @@ public class Tablero {
 	
 	
 	/**
-	 * Método para crear Caguano
+	 * Método crearCaguano para crear Caguano
 	 */
 	
 	public Caguanos crearCaguano() {
@@ -296,7 +296,7 @@ public class Tablero {
 
 	
 	/**
-	 * Método para crear Trupalla
+	 * Método crearTrupalla para crear Trupalla
 	 */
 	
 	
@@ -336,6 +336,11 @@ public class Tablero {
 		
 		return trupa;
 	} //cierre metodo crearTrupalla
+	
+	
+	/**
+	 * Método MostrarMatriz para mostrar matriz
+	 */
 	
 	public static void MostarMatriz() {
 		

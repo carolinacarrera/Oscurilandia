@@ -19,13 +19,6 @@ public class Huevo {
 	private int posicionColumna;
 	private int puntaje;
 	
-	/**
-	 *
-	 * Constructor de la clase, usa los mismos parámetros que su clase padre
-	 * @param posicionFila Posicion fila del huevo
-	 * @param posicionColumna Posicion columna del huevo
-	 * @param puntaje Puntaje de destruccion
-	 */
 	
 	
 	@Override
@@ -71,7 +64,14 @@ public class Huevo {
 		// TODO Auto-generated constructor stub
 	} //cierre constructor por defecto
 
-
+	/**
+	 *
+	 * Constructor de la clase, usa los mismos parámetros que su clase padre
+	 * @param posicionFila Posicion fila del huevo
+	 * @param posicionColumna Posicion columna del huevo
+	 * @param puntaje Puntaje de destruccion
+	 */
+	
 	public Huevo(int posicionFila, int posicionColumna, int puntaje, ArrayList<Huevo> huevos) {
 		super();
 		this.posicionFila = posicionFila;
