@@ -70,7 +70,7 @@ public class Huevo {
 	 * @param posicionFila Posicion fila del huevo
 	 * @param posicionColumna Posicion columna del huevo
 	 * @param puntaje Puntaje de destruccion
-	 * @param ArrayList Lista de huevos
+	 * @param huevos Lista de huevos
 	 */
 	
 	public Huevo(int posicionFila, int posicionColumna, int puntaje, ArrayList<Huevo> huevos) {
