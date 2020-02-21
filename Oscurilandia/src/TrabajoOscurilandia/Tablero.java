@@ -1,5 +1,14 @@
 package TrabajoOscurilandia;
 
+/**
+ * 
+ * Esta es la clase que representa al tablero
+ * @author Nicolas Alarcón, Carolina Carrera
+ * @version: 20/02/2020
+ * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Tablero.java">Versión en Github</a>
+ *
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

@@ -1,8 +1,15 @@
 package TrabajoOscurilandia;
+
+/**
+ * 
+ * Esta es la clase que representa a los proyectiles huevos
+ * @author Nicolas Alarcón, Carolina Carrera
+ * @version: 20/02/2020
+ * @see <a href="https://github.com/carolinacarrera/Oscurilandia/blob/master/Oscurilandia/src/TrabajoOscurilandia/Huevo.java">Versión en Github</a>
+ *
+ */
+
 import java.util.ArrayList;
-
-
-
 
 
 public class Huevo {
