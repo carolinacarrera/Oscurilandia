@@ -192,6 +192,7 @@ public class Tablero {
 	} //cierre lista carros array
 	
 	
+	
 	/**
 	 * @return CrearKromi para crear Kromi
 	 */
