@@ -19,66 +19,69 @@ public class Tablero {
 	public ArrayList<Huevo> Huevos = new ArrayList <Huevo>(); //ilimitados
 	private static Scanner lector = new Scanner(System.in);
 
+	
 
 	public static int getNumerosFila() {
 		return numerosFila;
-	}
+	} //cierre Getter NumerosFila
 
 
 	public static void setNumerosFila(int numerosFila) {
 		Tablero.numerosFila = numerosFila;
-	}
+	} //cierre Setter Numeros Fila
 
 
 	public static int getNumerosColumnas() {
 		return numerosColumnas;
-	}
+	} //cierre Getter Numeros Columnas
 
 	
 	public static void setNumerosColumnas(int numerosColumnas) {
 		Tablero.numerosColumnas = numerosColumnas;
-	}
+	} //cierre Setter numeros columnas
 
 
 	public static char[][] getTablero() {
 		return tablero;
-	}
+	} //cierre Getter Tablero array list
 
 
 	public static void setTablero(char[][] tablero) {
 		Tablero.tablero = tablero;
-	}
+	} //cierre Setter Tablero array list
 
 
 	public Carro[] getCarros() {
 		return carros;
-	}
+	} //cierre Getter Carros array list
 
 
 	public void setCarros(Carro[] carros) {
 		this.carros = carros;
-	}
+	} //cierre Setter Carros array list
 
 
 	public List<Huevo> getHuevos() {
 		return Huevos;
-	}
+	} //cierre Getter Huevos list
 
-
-	public Scanner getLector() {
-		return lector;
-	}
 	
 	public void setHuevos(ArrayList<Huevo> huevos) {
 		Huevos = huevos;
-	}
+	} //cierre Setter Huevos
 
 
-	public Tablero() {
-		
-	}
+	public Tablero() {	
+	} //cierre constructor por defecto
 
-
+	
+	/**
+	 *
+	 * Constructor de la clase
+	 * @param opcionFila Recoge posicion de ataque en las filas
+	 * @param opcionColumna Recoge posicion de ataque en las columnas
+	 */
+	
 	public static void LanzarHuevo() {
 		String opcionFila;
 		String opcionColumna;
@@ -98,23 +101,24 @@ public class Tablero {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 3;
 			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
-		}
+		} //cierre if
+		
 		else if (tablero[fila][columna] == 'C') {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 2;
 			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
-		}
+		} //cierre if
 		
 		else if (tablero[fila][columna] == 'T') {
 			tablero[fila][columna] = 'H';
 			puntaje = puntaje + 1;
 			JOptionPane.showMessageDialog(null, "Boom!! en el blanco");
-		}
+		} //cierre if
 		
 		else if (tablero[fila][columna] == 'H') {
 			tablero [fila][columna] = 'H';
 			JOptionPane.showMessageDialog(null, "Ya golpeaste a un Carro en esta posicion");
-		}
+		} //cierre if
 		
 		else if (tablero[fila][columna] == 'X')
 			JOptionPane.showMessageDialog(null, "Ya ocupaste esta coordenadas");
@@ -122,7 +126,7 @@ public class Tablero {
 			
 			tablero[fila][columna] = 'X';
 			JOptionPane.showMessageDialog(null, "Fallaste");
-		}
+		} //cierre else
 		
 		for (int i=0; i<3;i++) {
 			Carro kro = carros[i];
@@ -131,7 +135,7 @@ public class Tablero {
 			if (tablero[x][y] == 'H' && tablero[x+1][y] == 'H' && tablero[x+2][y] == 'H') {
 				puntaje += 10;
 			}
-		}
+		} //cierre for
 		
 		for (int i=3; i<8;i++) {
 			Carro cag = carros[i];
@@ -140,7 +144,7 @@ public class Tablero {
 			if (tablero[x][y] == 'H' && tablero[x][y+1] == 'H') {
 				puntaje += 7;
 			}
-		}
+		} //cierre for
 		
 	} //cierre metodo lanzar huevo
 
@@ -182,7 +186,16 @@ public class Tablero {
 	} //cierre lista carros array
 	
 	
+	/**
+	 *
+	 * Constructor de la clase
+	 * @param x Posicion aleatoria en la fila
+	 * @param y Posicion aleatoria en las columnas
+	 * @param marca Marca de Kromi
+	 * @param anioFabri Año de fabricacion de Kromi
 
+	 */
+	
 	public Kromi CrearKromi() {
 		
 		int x;
@@ -231,6 +244,18 @@ public class Tablero {
 				
 	} //cierre constructor Crear Kromi
 	
+	
+	/**
+	 *
+	 * Constructor de la clase
+	 * @param x Posicion aleatoria en la fila
+	 * @param y Posicion aleatoria en las columnas
+	 * @param fechaing Fecha de ingreso de Caguano
+	 * @param tiro tiro de Caguano
+	 * @param colorConfeti Color de confeti de Caguano
+
+	 */
+	
 	public Caguanos crearCaguano() {
 
 		int x;
@@ -276,6 +301,18 @@ public class Tablero {
 				
 	} //cierre constructor Crear Caguano
 
+	
+	/**
+	 *
+	 * Constructor de la clase
+	 * @param x Posicion aleatoria en la fila
+	 * @param y Posicion aleatoria en las columnas
+	 * @param fechaing Fecha de ingreso de Trupalla
+	 * @param nivelArm Nivel de armamento de Trupalla
+
+	 */
+	
+	
 	public Trupalla crearTrupalla() {
 		int x;
 		int y;
